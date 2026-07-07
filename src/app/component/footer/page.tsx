@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const FOOTER_COLUMNS = [
   {
@@ -25,19 +26,22 @@ export default function FooterPage() {
   return (
     <footer className="bg-[#0B0C0E] text-white pt-16 pb-8 font-sans antialiased border-t border-[#1F2124]/40">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 items-start">
-          
+
           {/* Logo & Description Column */}
           <div className="lg:col-span-4 space-y-6">
             <div className="flex items-center gap-2.5">
               {/* Custom Orange Pixel Logo */}
-              <svg className="w-5 h-5 text-[#FF4F18] flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="2" y="2" width="8" height="8" rx="1.5" />
-                <rect x="2" y="14" width="8" height="8" rx="1.5" />
-                <rect x="14" y="14" width="8" height="8" rx="1.5" />
-              </svg>
+              <Image
+                src="/demologo.png"
+                alt="Digitory Logo"
+                width={18}
+                height={18}
+                className="h-4.5 w-auto object-contain"
+                priority
+              />
               <span className="font-extrabold text-white text-[19px] tracking-tight">Digitory</span>
             </div>
 
