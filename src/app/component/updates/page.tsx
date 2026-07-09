@@ -41,9 +41,9 @@ export default function Updates() {
       {/* Horizontal Divider Line */}
       <hr className="border-t border-zinc-200 w-full" />
 
-      <section className="mx-auto max-w-7xl px-6 md:px-8 py-16 md:py-24">
+      <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 mb-16 leading-[1.15]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 mb-10 leading-[1.15]">
           Latest <span className="text-[#FF4F18]">Updates</span>
           <br />& Announcements
         </h2>
@@ -91,7 +91,7 @@ export default function Updates() {
               {/* Featured Image */}
               <div className="relative w-full aspect-16/10 rounded-[20px] overflow-hidden">
                 <Image
-                  src="/featured_update.png"
+                  src="/Background+HorizontalBorder.png"
                   alt="Featured Update Mockup"
                   fill
                   className="object-cover"

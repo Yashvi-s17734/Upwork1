@@ -39,13 +39,13 @@ export default function OrdersPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] font-sans antialiased">
+    <div className="bg-[#F8F9FA] font-sans antialiased">
       {/* 1. Header Section */}
-      <header className="w-full pt-16 md:pt-20">
+      <header className="w-full pt-10 md:pt-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Main Title Banner */}
           <div className="mb-12">
-            <h1 className="text-[44px] md:text-[56px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
+            <h1 className="text-[36px] md:text-[46px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
               Built for restaurants that <br />
               <span className="text-[#FF4F18]">don't stop moving.</span>
             </h1>
@@ -80,7 +80,7 @@ export default function OrdersPage() {
       </header>
 
       {/* 2. Main Content Section */}
-      <main className="w-full py-16 md:py-20">
+      <main className="w-full py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             

@@ -28,12 +28,12 @@ const INSIGHTS_ITEMS = [
 
 export default function InsightsPage() {
   return (
-    <div className="bg-white font-sans antialiased text-[#111111] py-16 md:py-24">
+    <div className="bg-white font-sans antialiased text-[#111111] py-10 md:py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <h1 className="text-[44px] md:text-[56px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
+          <h1 className="text-[36px] md:text-[46px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
             Latest <span className="text-[#FF4F18]">insights.</span>
           </h1>
           

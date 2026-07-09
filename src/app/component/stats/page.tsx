@@ -31,9 +31,9 @@ export default function Stats() {
       {/* Horizontal Divider Line */}
       <hr className="border-t border-zinc-200 w-full" />
       
-      <section className="mx-auto max-w-7xl px-6 md:px-8 py-16 md:py-24">
+      <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Heading */}
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 mb-16 md:mb-20">
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 mb-16 md:mb-20">
           Be rush-hour ready, <span className="text-[#FF4F18]">always</span>
         </h2>
 

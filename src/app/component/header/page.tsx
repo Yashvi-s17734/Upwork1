@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="sticky top-0 z-50 w-full px-4 py-4 md:px-8 md:py-6 bg-transparent">
+    <div className="sticky top-0 z-50 w-full px-4 pt-3 pb-1 md:px-8 md:pt-4 md:pb-2 bg-transparent">
       <header className="mx-auto max-w-7xl rounded-full bg-[#EAEAEA]/80 backdrop-blur-md pl-8 pr-4 py-3 flex items-center justify-between shadow-sm">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -77,11 +77,10 @@ export default function Header() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`md:hidden transition-all duration-200 ease-in-out ${
-          isMenuOpen
-            ? 'max-h-96 opacity-100 mt-3 border border-zinc-100 rounded-3xl bg-[#EAEAEA]/90 backdrop-blur-md p-6 shadow-lg'
-            : 'max-h-0 opacity-0 overflow-hidden pointer-events-none'
-        }`}
+        className={`md:hidden transition-all duration-200 ease-in-out ${isMenuOpen
+          ? 'max-h-96 opacity-100 mt-3 border border-zinc-100 rounded-3xl bg-[#EAEAEA]/90 backdrop-blur-md p-6 shadow-lg'
+          : 'max-h-0 opacity-0 overflow-hidden pointer-events-none'
+          }`}
       >
         <div className="flex flex-col gap-4">
           {navLinks.map((link) => (

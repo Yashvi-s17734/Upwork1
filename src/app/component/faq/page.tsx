@@ -33,12 +33,12 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="bg-white font-sans antialiased text-[#111111] py-16 md:py-24">
+    <div className="bg-white font-sans antialiased text-[#111111] py-10 md:py-16">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         
         {/* Title */}
         <div className="mb-14">
-          <h1 className="text-[36px] sm:text-[44px] md:text-[52px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
+          <h1 className="text-[30px] sm:text-[38px] md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
             Questions Before You <span className="text-[#FF4F18]">Commit?</span>
           </h1>
         </div>

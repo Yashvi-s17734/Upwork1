@@ -24,7 +24,7 @@ const FOOTER_COLUMNS = [
 
 export default function FooterPage() {
   return (
-    <footer className="bg-[#0B0C0E] text-white pt-16 pb-8 font-sans antialiased border-t border-[#1F2124]/40">
+    <footer className="bg-[#0B0C0E] text-white pt-12 pb-6 font-sans antialiased border-t border-[#1F2124]/40">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* Main Footer Content */}
@@ -37,9 +37,9 @@ export default function FooterPage() {
               <Image
                 src="/demologo.png"
                 alt="Digitory Logo"
-                width={18}
-                height={18}
-                className="h-4.5 w-auto object-contain"
+                width={28}
+                height={28}
+                className="h-7 w-auto object-contain"
                 priority
               />
               <span className="font-extrabold text-white text-[19px] tracking-tight">Digitory</span>
