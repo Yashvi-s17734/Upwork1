@@ -118,10 +118,10 @@ export default function RestaurantOSPage() {
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-          <h1 className="text-[36px] md:text-[46px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
             What changes when your <br />
             <span className="text-[#FF4F18]">restaurant has an OS.</span>
-          </h1>
+          </h2>
           
           <div>
             <button className="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-200/80 rounded-full font-bold text-sm text-[#111111] hover:bg-zinc-50 transition-colors shadow-sm select-none cursor-pointer">

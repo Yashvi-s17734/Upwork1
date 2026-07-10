@@ -23,9 +23,9 @@ export default function Header() {
           <Image
             src="/demologo.png"
             alt="Digitory Logo"
-            width={18}
-            height={18}
-            className="h-4.5 w-auto object-contain"
+            width={28}
+            height={28}
+            className="h-7 w-auto object-contain"
             priority
           />
           <span className="text-[20px] font-extrabold tracking-tight text-black">

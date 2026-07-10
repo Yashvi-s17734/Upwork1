@@ -43,7 +43,7 @@ export default function TestSection() {
 
       <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Heading */}
-        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 leading-[1.15] mb-10 md:mb-12">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-10 md:mb-12">
           Can your outlet pass the
           <br />
           <span className="text-[#FF4F18]">Saturday night</span> test?
@@ -85,10 +85,10 @@ export default function TestSection() {
 
                   {/* Step Text Info */}
                   <div className="w-full pb-5 border-b border-[#FF4F18]/25">
-                    <h4 className="text-lg font-bold text-zinc-950 leading-tight">
+                    <h4 className="text-sm sm:text-base md:text-lg font-bold text-zinc-950 leading-tight">
                       {step.title}
                     </h4>
-                    <p className="text-zinc-550 text-sm mt-1 leading-normal">
+                    <p className="text-zinc-550 text-xs sm:text-sm mt-1 leading-normal">
                       {step.desc}
                     </p>
                   </div>

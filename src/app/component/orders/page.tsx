@@ -45,10 +45,10 @@ export default function OrdersPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Main Title Banner */}
           <div className="mb-12">
-            <h1 className="text-[36px] md:text-[46px] font-[850] tracking-tight leading-[1.1] text-[#111111]">
+            <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
               Built for restaurants that <br />
               <span className="text-[#FF4F18]">don't stop moving.</span>
-            </h1>
+            </h2>
           </div>
 
           {/* Tab Navigation - Aligned within container, border-b spans full width */}
