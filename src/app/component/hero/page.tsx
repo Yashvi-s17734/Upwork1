@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-7xl px-6 md:px-8 pt-4 pb-10 md:pt-8 md:pb-16 lg:pt-10 lg:pb-20">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center">
-        
+
         {/* Left Copy Column */}
         <div className="lg:col-span-6 flex flex-col justify-center space-y-6 md:space-y-8">
           {/* Tagline */}
@@ -28,7 +28,7 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.1]">
-            Manage rush hours,
+            Manage chaos hours,
             <br />
             <span className="text-[#FF4F18]">not rush.</span>
           </h1>
@@ -42,13 +42,13 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 items-center">
             <Link
               href="#"
-              className="rounded-full bg-[#FF4F18] px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_8px_20px_rgba(255,79,24,0.35)] hover:shadow-[0_10px_24px_rgba(255,79,24,0.45)] active:scale-[0.98]"
+              className="rounded-full bg-[#FF4F18] px-5 py-3 text-sm sm:px-8 sm:py-4 sm:text-base font-semibold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_8px_20px_rgba(255,79,24,0.35)] hover:shadow-[0_10px_24px_rgba(255,79,24,0.45)] active:scale-[0.98]"
             >
               Book a demo
             </Link>
             <Link
               href="#"
-              className="rounded-full border border-zinc-200 bg-white px-8 py-4 text-base font-semibold text-zinc-800 transition-colors duration-200 hover:bg-zinc-50 active:scale-[0.98]"
+              className="rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm sm:px-8 sm:py-4 sm:text-base font-semibold text-zinc-800 transition-colors duration-200 hover:bg-zinc-50 active:scale-[0.98]"
             >
               See how it works
             </Link>

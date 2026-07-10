@@ -59,10 +59,10 @@ export default function Features() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-10 md:mb-12">
           {/* Heading */}
           <div className="lg:col-span-7">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15]">
               When every second counts,
               <br />
-              every <span className="text-[#FF4F18]">system should too.</span>
+              <span className="text-[#FF4F18]"> every system should too.</span>
             </h2>
           </div>
 

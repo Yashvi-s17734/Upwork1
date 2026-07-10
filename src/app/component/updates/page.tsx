@@ -43,7 +43,7 @@ export default function Updates() {
 
       <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-zinc-900 mb-10 leading-[1.15]">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] mb-10 leading-[1.15]">
           Latest <span className="text-[#FF4F18]">Updates</span>
           <br />& Announcements
         </h2>
@@ -60,10 +60,10 @@ export default function Updates() {
               >
                 {/* Date Badge */}
                 <div className="flex flex-col items-center justify-center h-16 w-16 md:h-20 md:w-20 rounded-2xl border border-orange-200/50 bg-[#FAF6F0] shrink-0 shadow-2xs select-none">
-                  <span className="text-2xl md:text-3xl font-extrabold text-[#9A3412] leading-none">
+                  <span className="text-2xl md:text-3xl font-extrabold text-[#FF4F18] leading-none">
                     {item.date}
                   </span>
-                  <span className="text-[10px] md:text-xs font-bold text-[#C2410C]/80 mt-1 uppercase tracking-wider">
+                  <span className="text-[10px] md:text-xs font-bold text-[#FF4F18]/80 mt-1 uppercase tracking-wider">
                     {item.month}
                   </span>
                 </div>

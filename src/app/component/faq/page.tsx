@@ -38,9 +38,9 @@ export default function FAQPage() {
         
         {/* Title */}
         <div className="mb-14">
-          <h1 className="text-[30px] sm:text-[38px] md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
             Questions Before You <span className="text-[#FF4F18]">Commit?</span>
-          </h1>
+          </h2>
         </div>
 
         {/* Accordions Container */}
