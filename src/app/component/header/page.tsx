@@ -12,8 +12,7 @@ export default function Header() {
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const activeTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    const activeTheme = savedTheme || 'light';
     setTheme(activeTheme);
     if (activeTheme === 'dark') {
       document.documentElement.classList.add('dark');
