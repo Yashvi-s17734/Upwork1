@@ -6,7 +6,7 @@ const TABS = [
   { id: "orders", label: "Orders" },
   { id: "kitchen", label: "Kitchen" },
   { id: "inventory", label: "Inventory" },
-  { id: "owner-view", label: "Owner View" },
+  { id: "owner-view", label: "Insights" },
   { id: "multi-outlet", label: "Multi-Outlet" },
 ];
 
@@ -62,8 +62,8 @@ export default function OrdersPage() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`
                       py-4 text-[15px] font-semibold transition-all duration-200 outline-none whitespace-nowrap cursor-pointer
-                      ${isActive 
-                        ? "text-black border-b-[2.5px] border-black" 
+                      ${isActive
+                        ? "text-black border-b-[2.5px] border-black"
                         : "text-[#999999] hover:text-zinc-600 border-b-[2.5px] border-transparent"
                       }
                     `}
@@ -83,7 +83,7 @@ export default function OrdersPage() {
       <main className="w-full py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left Column - Headline & Key Benefits */}
             <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
               <div className="space-y-4">
@@ -120,7 +120,7 @@ export default function OrdersPage() {
             {/* Right Column - Live Order Queue Card */}
             <div className="lg:col-span-5 w-full">
               <div className="bg-white rounded-[24px] border border-zinc-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.015)] p-8 space-y-6">
-                
+
                 {/* Card Header */}
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-[#111111] text-[16px]">
@@ -188,7 +188,7 @@ export default function OrdersPage() {
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </main>

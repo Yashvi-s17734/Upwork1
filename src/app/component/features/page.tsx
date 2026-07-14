@@ -8,7 +8,7 @@ export default function Features() {
     {
       num: '01',
       title: 'Orders & billing',
-      desc: 'From dine-in to Swiggy, Zomato and direct orders, every bill, every payment and every table flows through one seamless system.',
+      desc: 'From dine-in to online and direct orders, every bill, every payment and every table flows through one seamless system.',
       borderClasses: 'border-b border-zinc-200 md:border-r md:border-b',
       imageSrc: '/image4.png',
     },
