@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -103,6 +105,7 @@ body {
   background-color: rgba(23, 23, 26, 0.95) !important;
   border-color: rgba(63, 63, 70, 0.4) !important;
 }
+
 .dark .md\:hidden.bg-\[\#EAEAEA\]\/90 a:not(.bg-\[\#FF4F18\]) {
   color: #ffffff !important;
 }
@@ -112,9 +115,11 @@ body {
   color: #ffffff !important;
   border-color: #ffffff !important;
 }
+
 .dark nav button.text-\[\#999999\] {
   color: #71717a !important;
 }
+
 .dark nav button.text-\[\#999999\]:hover {
   color: #ffffff !important;
 }
@@ -124,12 +129,15 @@ body {
   background-color: #1d1b18 !important;
   border-color: rgba(120, 110, 90, 0.2) !important;
 }
+
 .dark .border-orange-200\/50 {
   border-color: rgba(255, 79, 24, 0.2) !important;
 }
+
 .dark .bg-\[\#FF4F18\]\/25 {
   background-color: rgba(255, 79, 24, 0.15) !important;
 }
+
 .dark .border-\[\#FF4F18\]\/25 {
   border-color: rgba(255, 79, 24, 0.15) !important;
-}
+}

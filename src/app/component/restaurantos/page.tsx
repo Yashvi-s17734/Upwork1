@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function RestaurantOSPage() {
   const testimonials = [
     {
-      theme: "dark",
+      theme: "light",
       quote: "Earlier, rush hours were chaos between floor, kitchen, and manager. Digitory gave us real-time updates and smooth coordination. Friday nights feel like we finally have a superpower.",
       stat: (
         <>
@@ -37,6 +37,24 @@ export default function RestaurantOSPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  useEffect(() => {
+    // Detect initial theme
+    setIsDarkTheme(document.documentElement.classList.contains("dark"));
+
+    // Set up MutationObserver to sync dark mode changes
+    const observer = new MutationObserver(() => {
+      setIsDarkTheme(document.documentElement.classList.contains("dark"));
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const minSwipeDistance = 50;
 
@@ -62,16 +80,14 @@ export default function RestaurantOSPage() {
   };
 
   const renderCard = (item: typeof testimonials[0], isSlider: boolean = false) => {
-    const isDark = item.theme === "dark";
+    const isDark = isDarkTheme;
     return (
       <div
-        className={`flex flex-col h-full rounded-[32px] p-8 md:p-10 justify-between gap-8 transition-transform duration-300 ${
-          isSlider ? "" : "hover:-translate-y-1"
-        } ${
-          isDark
+        className={`flex flex-col h-full rounded-[32px] p-8 md:p-10 justify-between gap-8 transition-transform duration-300 ${isSlider ? "" : "hover:-translate-y-1"
+          } ${isDark
             ? "bg-[#0B0C0E] border border-transparent"
             : "bg-[#F8F9FA] border border-zinc-200/40"
-        }`}
+          }`}
       >
         <div className="space-y-6 flex-grow">
           {/* Slanted Quotes */}
@@ -79,7 +95,7 @@ export default function RestaurantOSPage() {
             <span className="w-1.5 h-4.5 bg-[#FF4F18] rounded-full" />
             <span className="w-1.5 h-4.5 bg-[#FF4F18] rounded-full" />
           </div>
-          
+
           <p className={`text-[16px] leading-relaxed font-semibold ${isDark ? "text-[#A3A3A3]" : "text-[#4A4A4A]"}`}>
             {item.quote}
           </p>
@@ -115,14 +131,14 @@ export default function RestaurantOSPage() {
   return (
     <div className="bg-white font-sans antialiased text-[#111111]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-16">
-        
+
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
-            What changes when your <br />
-            <span className="text-[#FF4F18]">restaurant has an OS.</span>
+            Real Chaos Stories <br />
+            {/* <span className="text-[#FF4F18]">restaurant has an OS.</span> */}
           </h2>
-          
+
           <div>
             <button className="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-200/80 rounded-full font-bold text-sm text-[#111111] hover:bg-zinc-50 transition-colors shadow-sm select-none cursor-pointer">
               <span>All stories</span>
@@ -144,7 +160,7 @@ export default function RestaurantOSPage() {
 
         {/* Mobile slider layout (hidden on desktop) */}
         <div className="block md:hidden">
-          <div 
+          <div
             className="relative w-full overflow-hidden"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
@@ -179,9 +195,8 @@ export default function RestaurantOSPage() {
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
-                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    activeIndex === idx ? "w-6 bg-[#FF4F18]" : "w-2.5 bg-zinc-300"
-                  }`}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${activeIndex === idx ? "w-6 bg-[#FF4F18]" : "w-2.5 bg-zinc-300"
+                    }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
               ))}
