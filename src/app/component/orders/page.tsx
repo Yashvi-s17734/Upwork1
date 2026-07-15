@@ -18,6 +18,59 @@ const INITIAL_ORDERS = [
   { id: 5, text: "Swiggy #7831 — Paneer Set", time: "3 min", status: "warning", dotColor: "bg-[#EF4444]", hasWarning: true },
 ];
 
+const TAB_DATA = {
+  orders: {
+    heading: "Orders move. Your team doesn't have to.",
+    description: "Every order — dine-in, delivery, or QR — reaches the right kitchen station instantly. No paper. No shouting.",
+    bullets: [
+      "Every order, one workflow",
+      "Swiggy, Zomato, QR & dine-in synced automatically",
+      "Faster billing. Shorter queues.",
+      "No switching between apps or chasing tickets"
+    ]
+  },
+  kitchen: {
+    heading: "The kitchen stays in sync. Even when it's packed.",
+    description: "Orders reach the right station instantly, helping your team cook faster, communicate better and serve without confusion.",
+    bullets: [
+      "Instant KDS updates",
+      "No missed or duplicate orders",
+      "Faster table turnaround",
+      "Less shouting. More serving."
+    ]
+  },
+  inventory: {
+    heading: "Know what's running low. Before your chef does.",
+    description: "Every order updates inventory automatically, giving you complete control over stock, wastage and margins.",
+    bullets: [
+      "Live inventory tracking",
+      "Automatic ingredient deduction",
+      "Reduce wastage and stock-outs",
+      "Protect every margin"
+    ]
+  },
+  "owner-view": {
+    heading: "Stop asking, start knowing.",
+    description: "Live insights across sales, orders and performance help you make smarter decisions without waiting for end-of-day reports.",
+    bullets: [
+      "Live sales dashboard",
+      "Best-selling items",
+      "Peak hour insights",
+      "Real-time business health"
+    ]
+  },
+  "multi-outlet": {
+    heading: "One dashboard, every outlet.",
+    description: "Whether you have one restaurant or twenty, manage every location from one place with complete visibility.",
+    bullets: [
+      "Compare outlet performance",
+      "Track sales in real time",
+      "Spot operational issues early",
+      "Scale with confidence"
+    ]
+  }
+};
+
 export default function OrdersPage() {
   const [activeTab, setActiveTab] = useState("orders");
   const [orders, setOrders] = useState(INITIAL_ORDERS);
@@ -37,6 +90,8 @@ export default function OrdersPage() {
       })
     );
   };
+
+  const activeTabContent = TAB_DATA[activeTab as keyof typeof TAB_DATA] || TAB_DATA.orders;
 
   return (
     <div className="bg-[#F8F9FA] font-sans antialiased">
@@ -88,21 +143,16 @@ export default function OrdersPage() {
             <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
               <div className="space-y-4">
                 <h2 className="text-3xl md:text-[40px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
-                  Orders move. Your team doesn't have to.
+                  {activeTabContent.heading}
                 </h2>
                 <p className="text-[17px] text-[#666666] leading-relaxed max-w-lg">
-                  Every order — dine-in, delivery, or QR — reaches the right kitchen station instantly. No paper. No shouting.
+                  {activeTabContent.description}
                 </p>
               </div>
 
               {/* Bulleted checklist */}
               <ul className="space-y-4 pt-4">
-                {[
-                  "Every order, one workflow",
-                  "Swiggy, Zomato, QR & dine-in synced automatically",
-                  "Faster billing. Shorter queues.",
-                  "No switching between apps or chasing tickets"
-                ].map((item, index) => (
+                {activeTabContent.bullets.map((item, index) => (
                   <li key={index} className="flex items-center gap-4 group">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
                       <svg className="w-3 h-3 stroke-[3] stroke-white" fill="none" viewBox="0 0 24 24">
@@ -117,10 +167,9 @@ export default function OrdersPage() {
               </ul>
             </div>
 
-            {/* Right Column - Live Order Queue Card */}
+            {/* Right Column - Live Order Queue Card (static across all tabs) */}
             <div className="lg:col-span-5 w-full">
               <div className="bg-white rounded-[24px] border border-zinc-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.015)] p-8 space-y-6">
-
                 {/* Card Header */}
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-[#111111] text-[16px]">
@@ -188,7 +237,6 @@ export default function OrdersPage() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </main>

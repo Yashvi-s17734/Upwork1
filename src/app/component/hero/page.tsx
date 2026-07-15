@@ -68,7 +68,7 @@ export default function Hero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.1]">
             Manage chaos hours,
             <br />
-            <span className="text-[#FF4F18]">not rush.</span>
+            <span className="text-[#FF4F18]">not chaos.</span>
           </h1>
 
           {/* Subtitle */}
