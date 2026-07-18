@@ -141,3 +141,8 @@ body {
 .dark .border-\[\#FF4F18\]\/25 {
   border-color: rgba(255, 79, 24, 0.15) !important;
 }
+
+/* Custom dark mode filter for embedded Google Maps */
+.dark .dark-map {
+  filter: invert(90%) hue-rotate(180deg) grayscale(15%) contrast(95%);
+}
