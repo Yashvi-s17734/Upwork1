@@ -63,7 +63,7 @@ export default function Header() {
     { label: 'Solutions', href: '#' },
     { label: 'Restaurant Types', href: '#' },
     { label: 'Success Stories', href: '#' },
-    { label: 'Resources', href: '#' },
+    { label: 'Resources', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ];
 
