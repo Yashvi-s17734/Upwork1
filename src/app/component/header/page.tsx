@@ -10,15 +10,18 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const activeTheme = savedTheme || 'light';
-    setTheme(activeTheme);
     if (activeTheme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
+    const timer = setTimeout(() => {
+      setMounted(true);
+      setTheme(activeTheme);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const toggleTheme = () => {
@@ -102,7 +105,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           {renderThemeToggle()}
           <Link
-            href="#"
+            href="/request-demo"
             className="rounded-full bg-[#FF4F18] px-6 py-2.5 text-[15px] font-semibold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_6px_16px_rgba(255,79,24,0.35)] hover:shadow-[0_8px_20px_rgba(255,79,24,0.45)] active:scale-[0.98]"
           >
             Book a demo
@@ -153,7 +156,7 @@ export default function Header() {
           ))}
           <div className="mt-2 pt-4 border-t border-zinc-200">
             <Link
-              href="#"
+              href="/request-demo"
               onClick={() => setIsMenuOpen(false)}
               className="flex w-full items-center justify-center rounded-full bg-[#FF4F18] py-3 text-[15px] font-semibold text-white transition-all hover:bg-[#E03F0D] shadow-[0_6px_16px_rgba(255,79,24,0.35)]"
             >

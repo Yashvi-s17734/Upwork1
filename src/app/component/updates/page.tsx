@@ -46,7 +46,8 @@ export default function Updates() {
   };
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -112,7 +113,7 @@ export default function Updates() {
               <div
                 key={idx}
                 onClick={() => handleItemClick(item)}
-                className={`flex gap-6 py-6 items-start border-b border-zinc-200/60 last:border-b-0 cursor-pointer lg:cursor-default hover:bg-zinc-50/40 dark:hover:bg-zinc-900/40 lg:hover:bg-transparent rounded-xl px-2 -mx-2 transition-all duration-250 pointer-events-auto ${
+                className={`flex gap-6 py-6 items-start border-b border-zinc-200/60 last:border-b-0 cursor-pointer hover:bg-zinc-50/40 dark:hover:bg-zinc-900/40 rounded-xl px-2 -mx-2 transition-all duration-250 pointer-events-auto ${
                   idx === 0 ? "lg:pt-0" : ""
                 }`}
               >
@@ -172,12 +173,12 @@ export default function Updates() {
                 </p>
 
                 {/* Read Full Story Button */}
-                <Link
-                  href="#"
-                  className="inline-block border border-[#FF4F18] text-[#FF4F18] font-bold text-xs uppercase tracking-wider px-6 py-3 hover:bg-[#FF4F18] hover:text-white transition-colors duration-200 rounded-xs"
+                <button
+                  onClick={() => setIsFeaturedOpen(true)}
+                  className="inline-block border border-[#FF4F18] text-[#FF4F18] font-bold text-xs uppercase tracking-wider px-6 py-3 hover:bg-[#FF4F18] hover:text-white transition-colors duration-200 rounded-xs cursor-pointer text-center"
                 >
                   Read Full Story →
-                </Link>
+                </button>
               </div>
 
             </div>
@@ -198,22 +199,26 @@ export default function Updates() {
           from { opacity: 0; }
           to { opacity: 1; }
         }
+        @keyframes scaleUp {
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
+        }
         `
       }} />
 
-      {/* Bottom Sheet Drawer for Mobile */}
+      {/* Bottom Sheet Drawer / Modal */}
       {mounted && selectedUpdate && createPortal(
-        <div className="fixed inset-0 z-[999] lg:hidden flex flex-col justify-end">
+        <div className="fixed inset-0 z-[999] flex flex-col justify-end lg:justify-center lg:items-center p-0 lg:p-4">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 animate-[fadeIn_0.2s_ease-out]"
             onClick={() => setSelectedUpdate(null)}
           />
           
-          {/* Drawer Sheet */}
-          <div className="relative w-full max-h-[85vh] bg-white dark:bg-zinc-900 rounded-t-[32px] p-6 shadow-2xl flex flex-col animate-[slideUp_0.3s_cubic-bezier(0.16,1,0.3,1)] overflow-y-auto z-10">
+          {/* Drawer Sheet / Modal Content */}
+          <div className="relative w-full lg:max-w-xl max-h-[85vh] lg:max-h-[90vh] bg-white dark:bg-zinc-900 rounded-t-[32px] lg:rounded-[32px] p-6 lg:p-8 shadow-2xl flex flex-col animate-[slideUp_0.3s_cubic-bezier(0.16,1,0.3,1)] lg:animate-[scaleUp_0.25s_cubic-bezier(0.16,1,0.3,1)] overflow-y-auto z-10">
             {/* Drag Handle Indicator */}
-            <div className="mx-auto w-12 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 shrink-0" />
+            <div className="mx-auto w-12 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 shrink-0 lg:hidden" />
             
             {/* Header Area */}
             <div className="relative flex justify-between items-start mb-6 pr-10">
@@ -268,19 +273,19 @@ export default function Updates() {
         document.body
       )}
 
-      {/* Featured Update Mobile Popup */}
+      {/* Featured Update Drawer / Modal */}
       {mounted && isFeaturedOpen && createPortal(
-        <div className="fixed inset-0 z-[999] lg:hidden flex flex-col justify-end">
+        <div className="fixed inset-0 z-[999] flex flex-col justify-end lg:justify-center lg:items-center p-0 lg:p-4">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-300 animate-[fadeIn_0.2s_ease-out]"
             onClick={() => setIsFeaturedOpen(false)}
           />
           
-          {/* Drawer Sheet */}
-          <div className="relative w-full max-h-[90vh] bg-white dark:bg-zinc-900 rounded-t-[32px] p-6 shadow-2xl flex flex-col animate-[slideUp_0.3s_cubic-bezier(0.16,1,0.3,1)] overflow-y-auto z-10">
+          {/* Drawer Sheet / Modal Content */}
+          <div className="relative w-full lg:max-w-2xl max-h-[90vh] lg:max-h-[90vh] bg-white dark:bg-zinc-900 rounded-t-[32px] lg:rounded-[32px] p-6 lg:p-8 shadow-2xl flex flex-col animate-[slideUp_0.3s_cubic-bezier(0.16,1,0.3,1)] lg:animate-[scaleUp_0.25s_cubic-bezier(0.16,1,0.3,1)] overflow-y-auto z-10">
             {/* Drag Handle Indicator */}
-            <div className="mx-auto w-12 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 shrink-0" />
+            <div className="mx-auto w-12 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mb-6 shrink-0 lg:hidden" />
             
             {/* Close Button */}
             <button

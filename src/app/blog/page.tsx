@@ -8,6 +8,7 @@ import FooterPage from '../component/footer/page';
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Articles');
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0d0d0e] transition-colors duration-300 flex flex-col font-sans">
@@ -19,8 +20,13 @@ export default function BlogPage() {
         <BlogHero
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
         />
-        <LatestStories selectedCategory={selectedCategory} />
+        <LatestStories
+          selectedCategory={selectedCategory}
+          searchQuery={searchQuery}
+        />
       </main>
 
       {/* Footer */}

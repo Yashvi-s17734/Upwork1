@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, use } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../../component/header/page';
@@ -19,6 +19,65 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   const [copied, setCopied] = useState(false);
   const [isPlayingVideo, setIsPlayingVideo] = useState(false);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Comments State
+  interface Comment {
+    id: string;
+    name: string;
+    text: string;
+    date: string;
+  }
+
+  const [comments, setComments] = useState<Comment[]>([]);
+  const [newCommentName, setNewCommentName] = useState('');
+  const [newCommentText, setNewCommentText] = useState('');
+
+  // Load comments from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem(`blog-comments-${resolvedParams.slug}`);
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        const timer = setTimeout(() => {
+          setComments(parsed);
+        }, 0);
+        return () => clearTimeout(timer);
+      } catch (e) {
+        console.error('Failed to parse comments from localStorage', e);
+      }
+    }
+  }, [resolvedParams.slug]);
+
+  const handleAddComment = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newCommentName.trim() || !newCommentText.trim()) return;
+
+    const commentObj: Comment = {
+      id: Date.now().toString(),
+      name: newCommentName.trim(),
+      text: newCommentText.trim(),
+      date: new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }),
+    };
+
+    const updatedComments = [...comments, commentObj];
+    setComments(updatedComments);
+    localStorage.setItem(`blog-comments-${resolvedParams.slug}`, JSON.stringify(updatedComments));
+    setNewCommentName('');
+    setNewCommentText('');
+  };
 
   const handleCopyLink = () => {
     if (typeof window !== 'undefined') {
@@ -123,7 +182,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                     </svg>
                   </a>
                   <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                    href={mounted ? `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}` : `https://www.linkedin.com/sharing/share-offsite/?url=`}
                     target="_blank"
                     rel="noreferrer"
                     className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
@@ -138,7 +197,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
             </aside>
 
             {/* Middle Main Content */}
-            <div className="lg:col-span-6 space-y-10 text-zinc-800 dark:text-zinc-200 leading-relaxed font-normal text-base md:text-[17px]">
+            <div className="lg:col-span-9 space-y-10 text-zinc-800 dark:text-zinc-200 leading-relaxed font-normal text-base md:text-[17px]">
               {/* Media Block / Video Preview if available */}
               {article.mediaBlock && (
                 <div className="my-6">
@@ -211,49 +270,82 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                 </section>
               ))}
 
-              {/* Author Info Card */}
-              <div className="pt-8 mt-12 border-t border-zinc-200/60 dark:border-zinc-800/60">
-                <div className="bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 bg-amber-400 border border-zinc-300 dark:border-zinc-700">
-                    <Image
-                      src="/demologo.png"
-                      alt={article.author.name}
-                      fill
-                      className="object-contain p-2 bg-white"
+
+
+              {/* Discussion / Comments Section */}
+              <div className="pt-10 mt-12 border-t border-zinc-200/60 dark:border-zinc-800/60 space-y-6">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
+                  Discussion ({comments.length})
+                </h3>
+
+                {/* Comments List */}
+                <div className="space-y-4">
+                  {comments.map((comment) => (
+                    <div
+                      key={comment.id}
+                      className="bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800/60 p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 animate-[fadeIn_0.3s_ease-out]"
+                    >
+                      {/* Avatar */}
+                      <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 bg-white border border-zinc-300 dark:border-zinc-700">
+                        <Image
+                          src="/demologo.png"
+                          alt={comment.name}
+                          fill
+                          className="object-contain p-2 bg-white"
+                        />
+                      </div>
+
+                      {/* Content */}
+                      <div>
+                        <h4 className="text-base font-semibold text-zinc-900 dark:text-white">
+                          {comment.name}
+                        </h4>
+                        <p className="text-xs text-zinc-400 dark:text-zinc-500 mb-1">
+                          {comment.date}
+                        </p>
+                        <p className="text-xs text-zinc-650 dark:text-zinc-400 leading-relaxed font-normal">
+                          {comment.text}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Add Comment Form */}
+                <form onSubmit={handleAddComment} className="flex flex-col gap-4 pt-4">
+                  <h4 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider">
+                    Add a comment
+                  </h4>
+                  
+                  <div className="grid grid-cols-1 gap-4">
+                    <input
+                      type="text"
+                      value={newCommentName}
+                      onChange={(e) => setNewCommentName(e.target.value)}
+                      placeholder="Your Name"
+                      required
+                      className="w-full max-w-sm px-4 py-2.5 text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-[#FF4F18] shadow-2xs font-medium"
+                    />
+                    
+                    <textarea
+                      value={newCommentText}
+                      onChange={(e) => setNewCommentText(e.target.value)}
+                      placeholder="Share your thoughts..."
+                      required
+                      rows={4}
+                      className="w-full px-4 py-3 text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-[#FF4F18] shadow-2xs font-medium resize-none"
                     />
                   </div>
-                  <div>
-                    <h4 className="text-base font-semibold text-zinc-900 dark:text-white">
-                      {article.author.name}
-                    </h4>
-                    <p className="text-xs text-zinc-400 dark:text-zinc-500 mb-1">
-                      {article.author.role}
-                    </p>
-                    <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                      {article.author.bio}
-                    </p>
-                  </div>
-                </div>
+
+                  <button
+                    type="submit"
+                    className="px-6 py-3 bg-[#FF4F18] hover:bg-[#e04313] text-white text-xs uppercase tracking-widest font-extrabold rounded-xl transition-all duration-200 cursor-pointer self-start shadow-xs hover:shadow-sm"
+                  >
+                    Post Comment
+                  </button>
+                </form>
               </div>
             </div>
-
-            {/* Right Sidebar: Sticky Call to Action Card */}
-            <aside className="lg:col-span-3 hidden lg:block sticky top-28 self-start">
-              <div className="bg-zinc-50 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800/60 p-6 rounded-2xl space-y-4 shadow-2xs">
-                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-tight">
-                  Want to transform your kitchen?
-                </h3>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Scale your restaurant operations with Digitory&apos;s all-in-one OS.
-                </p>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center py-2.5 px-4 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 text-xs font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors shadow-xs"
-                >
-                  Book a demo
-                </Link>
-              </div>
-            </aside>
           </div>
 
           {/* Similar Articles Section */}

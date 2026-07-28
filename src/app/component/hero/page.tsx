@@ -79,7 +79,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 items-center">
             <Link
-              href="#"
+              href="/request-demo"
               className="rounded-full bg-[#FF4F18] px-5 py-3 text-sm sm:px-8 sm:py-4 sm:text-base font-semibold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_8px_20px_rgba(255,79,24,0.35)] hover:shadow-[0_10px_24px_rgba(255,79,24,0.45)] active:scale-[0.98]"
             >
               Book a demo

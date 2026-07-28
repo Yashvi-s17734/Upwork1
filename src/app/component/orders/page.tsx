@@ -102,7 +102,7 @@ export default function OrdersPage() {
           <div className="mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
               Built for restaurants that <br />
-              <span className="text-[#FF4F18]">don't stop moving.</span>
+              <span className="text-[#FF4F18]">don&apos;t stop moving.</span>
             </h2>
           </div>
 

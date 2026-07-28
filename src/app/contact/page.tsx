@@ -45,9 +45,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] dark:bg-[#08080a] transition-colors duration-300 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#fafafa] dark:bg-[#08080a] transition-colors duration-300 flex flex-col font-sans relative">
       {/* Header */}
-      <Header />
+      <div className="absolute top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
 
       <main className="flex-1 w-full bg-[#fafafa] dark:bg-[#08080a] text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
         
@@ -68,37 +70,6 @@ export default function ContactPage() {
             </video>
             {/* Overlay Gradient for high contrast */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
-          </div>
-
-          {/* Hero Content */}
-          <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-6">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold text-zinc-300 uppercase tracking-widest animate-pulse">
-              Connect With Us
-            </span>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-[850] tracking-tight text-white leading-[1.1] max-w-4xl mx-auto">
-              Cinematic Dining.
-              <br />
-              <span className="text-[#FF4F18] drop-shadow-[0_4px_12px_rgba(255,79,24,0.2)]">
-                Streamlined Operations.
-              </span>
-            </h1>
-
-            <p className="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-              Experience the restaurant operating system that manages chaos hours, so you can focus on cooking and storytelling.
-            </p>
-
-            <div className="pt-6">
-              <a
-                href="#contact-content"
-                className="inline-flex items-center justify-center rounded-full bg-[#FF4F18] px-8 py-4 text-base font-bold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_8px_24px_rgba(255,79,24,0.4)] hover:shadow-[0_12px_28px_rgba(255,79,24,0.5)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] select-none"
-              >
-                Send a Message
-                <svg className="ml-2 w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 13l-7 7-7-7" />
-                </svg>
-              </a>
-            </div>
           </div>
         </section>
 

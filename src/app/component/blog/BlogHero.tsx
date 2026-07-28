@@ -7,11 +7,15 @@ import Link from 'next/link';
 interface BlogHeroProps {
   selectedCategory?: string;
   onSelectCategory?: (category: string) => void;
+  searchQuery?: string;
+  onSearchChange?: (query: string) => void;
 }
 
 export default function BlogHero({
   selectedCategory = 'All Articles',
   onSelectCategory,
+  searchQuery = '',
+  onSearchChange,
 }: BlogHeroProps) {
   const [internalCategory, setInternalCategory] = useState('All Articles');
 
@@ -35,30 +39,59 @@ export default function BlogHero({
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10">
-      {/* Top Header Bar: Explore Topics & Categories */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 md:pb-12 border-b border-zinc-200/60 dark:border-zinc-800/60">
-        <span className="text-xs md:text-sm font-semibold tracking-wider text-zinc-400 dark:text-zinc-500 uppercase">
+      {/* Top Header Bar: Explore Topics & Categories + Right-aligned Search Bar */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 md:pb-12 border-b border-zinc-200/60 dark:border-zinc-800/60">
+        <span className="text-xs md:text-sm font-semibold tracking-wider text-zinc-400 dark:text-zinc-500 uppercase shrink-0">
           EXPLORE TOPICS
         </span>
 
-        <nav className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8">
-          {categories.map((category) => {
-            const isActive = activeCategory === category;
-            return (
-              <button
-                key={category}
-                onClick={() => handleCategoryClick(category)}
-                className={`text-sm font-medium transition-colors cursor-pointer ${
-                  isActive
-                    ? 'text-zinc-900 dark:text-white font-semibold'
-                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
-                }`}
+        {/* Right Section Wrapper */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-end flex-1 gap-6 w-full lg:w-auto">
+          {/* Search Bar */}
+          <div className="relative w-full sm:w-72 shrink-0">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-zinc-400 dark:text-zinc-500">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
               >
-                {category}
-              </button>
-            );
-          })}
-        </nav>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => onSearchChange && onSearchChange(e.target.value)}
+              placeholder="What are you looking for?"
+              className="w-full pl-10 pr-4 py-2 text-sm rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 transition-all shadow-2xs"
+            />
+          </div>
+
+          <nav className="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 justify-end shrink-0">
+            {categories.map((category) => {
+              const isActive = activeCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryClick(category)}
+                  className={`text-sm font-medium transition-colors cursor-pointer ${
+                    isActive
+                      ? 'text-zinc-900 dark:text-white font-semibold'
+                      : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
       </div>
 
       {/* Featured Article Section */}

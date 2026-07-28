@@ -41,7 +41,9 @@ export default function RestaurantOSPage() {
 
   useEffect(() => {
     // Detect initial theme
-    setIsDarkTheme(document.documentElement.classList.contains("dark"));
+    const timer = setTimeout(() => {
+      setIsDarkTheme(document.documentElement.classList.contains("dark"));
+    }, 0);
 
     // Set up MutationObserver to sync dark mode changes
     const observer = new MutationObserver(() => {
@@ -53,7 +55,10 @@ export default function RestaurantOSPage() {
       attributeFilter: ["class"],
     });
 
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, []);
 
   const minSwipeDistance = 50;
