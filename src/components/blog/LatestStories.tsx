@@ -162,16 +162,21 @@ export default function LatestStories({
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
       {/* Section Header: Title */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 md:mb-12">
-        <h2 className="text-2xl sm:text-3xl font-medium tracking-tight text-zinc-900 dark:text-white">
-          Latest stories
-        </h2>
+        <div>
+          <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-2">
+            Blog & Articles
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] dark:text-white leading-[1.15]">
+            Latest <span className="text-[#FF4F18]">Stories</span>
+          </h2>
+        </div>
       </div>
 
       {/* Filtered Results */}
       {isFiltering ? (
         <div>
           {filteredStories.length === 0 ? (
-            <div className="text-center py-16 text-zinc-500 dark:text-zinc-400">
+            <div className="text-center py-16 text-zinc-500 dark:text-zinc-400 font-semibold">
               No stories found matching your criteria.
             </div>
           ) : (
@@ -182,7 +187,7 @@ export default function LatestStories({
                   href={`/blog/${article.slug}`}
                   className="group flex flex-col"
                 >
-                  <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60">
+                  <div className="relative aspect-16/10 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                     <Image
                       src={encodeURI(article.image)}
                       alt={article.title}
@@ -190,10 +195,10 @@ export default function LatestStories({
                       className="object-cover group-hover:scale-103 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+                  <h3 className="text-base font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2">
                     {article.title}
                   </h3>
-                  <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
+                  <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 mt-auto">
                     {article.date}
                   </p>
                 </Link>
@@ -211,7 +216,7 @@ export default function LatestStories({
               href={`/blog/${mainArticle.slug}`}
               className="group flex flex-col"
             >
-              <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+              <div className="relative aspect-16/10 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                 <Image
                   src={encodeURI(mainArticle.image)}
                   alt={mainArticle.title}
@@ -220,10 +225,10 @@ export default function LatestStories({
                   priority
                 />
               </div>
-              <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+              <h3 className="text-base font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2">
                 {mainArticle.title}
               </h3>
-              <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
+              <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 mt-auto">
                 {mainArticle.date}
               </p>
             </Link>
@@ -235,7 +240,7 @@ export default function LatestStories({
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col"
               >
-                <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+                <div className="relative aspect-16/10 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                   <Image
                     src={encodeURI(article.image)}
                     alt={article.title}
@@ -243,10 +248,10 @@ export default function LatestStories({
                     className="object-cover group-hover:scale-103 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+                <h3 className="text-base font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2">
                   {article.title}
                 </h3>
-                <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
+                <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 mt-auto">
                   {article.date}
                 </p>
               </Link>
@@ -261,7 +266,7 @@ export default function LatestStories({
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col"
               >
-                <div className="relative aspect-16/9 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+                <div className="relative aspect-16/9 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                   <Image
                     src={encodeURI(article.image)}
                     alt={article.title}
@@ -269,10 +274,10 @@ export default function LatestStories({
                     className="object-cover group-hover:scale-102 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-lg font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+                <h3 className="text-lg font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2">
                   {article.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-500">
+                <p className="text-xs sm:text-sm font-semibold text-zinc-400 dark:text-zinc-500">
                   {article.date}
                 </p>
               </Link>
@@ -287,7 +292,7 @@ export default function LatestStories({
                 href={`/blog/${article.slug}`}
                 className="group flex flex-col"
               >
-                <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+                <div className="relative aspect-16/10 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                   <Image
                     src={encodeURI(article.image)}
                     alt={article.title}
@@ -295,10 +300,10 @@ export default function LatestStories({
                     className="object-cover group-hover:scale-102 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+                <h3 className="text-base font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2">
                   {article.title}
                 </h3>
-                <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500">
                   {article.date}
                 </p>
               </Link>
@@ -312,11 +317,11 @@ export default function LatestStories({
         <button
           type="button"
           onClick={() => setVisibleCount((prev) => prev + 6)}
-          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-white transition-all shadow-xs cursor-pointer"
+          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#FF4F18] text-sm font-bold text-white transition-all duration-200 hover:bg-[#E03F0D] shadow-[0_8px_20px_rgba(255,79,24,0.35)] hover:shadow-[0_10px_24px_rgba(255,79,24,0.45)] active:scale-[0.98] cursor-pointer"
         >
-          <span>Load More</span>
+          <span>Load More Stories</span>
           <svg
-            className="w-4 h-4 text-zinc-500 dark:text-zinc-400"
+            className="w-4 h-4 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -324,7 +329,7 @@ export default function LatestStories({
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={2.5}
               d="M19 9l-7 7-7-7"
             />
           </svg>

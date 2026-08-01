@@ -37,8 +37,8 @@ export default function RadialCommandCenter() {
       id: "kds",
       label: "Kitchen KDS",
       sublabel: "35% Faster Prep",
-      iconBg: "bg-[#EAF9F0]",
-      iconColor: "text-teal-600",
+      iconBg: "bg-[#FFF3EF]",
+      iconColor: "text-[#FF4F18]",
       iconSvg: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
@@ -53,8 +53,8 @@ export default function RadialCommandCenter() {
       id: "inventory",
       label: "Smart Inventory",
       sublabel: "Recipe Auto-Deduct",
-      iconBg: "bg-[#FEF9C3]",
-      iconColor: "text-amber-600",
+      iconBg: "bg-[#FFF3EF]",
+      iconColor: "text-[#FF4F18]",
       iconSvg: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
@@ -69,8 +69,8 @@ export default function RadialCommandCenter() {
       id: "multioutlet",
       label: "Multi-Outlet Hub",
       sublabel: "Global Menu Push",
-      iconBg: "bg-[#EFF6FF]",
-      iconColor: "text-blue-600",
+      iconBg: "bg-[#FFF3EF]",
+      iconColor: "text-[#FF4F18]",
       iconSvg: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
@@ -85,8 +85,8 @@ export default function RadialCommandCenter() {
       id: "ai",
       label: "AI Forecast BI",
       sublabel: "Real-Time Reports",
-      iconBg: "bg-[#FAF5FF]",
-      iconColor: "text-purple-600",
+      iconBg: "bg-[#FFF3EF]",
+      iconColor: "text-[#FF4F18]",
       iconSvg: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0017.75 3.75H6.25A2.25 2.25 0 004 6v12A2.25 2.25 0 006.25 20.25z" />
@@ -101,8 +101,8 @@ export default function RadialCommandCenter() {
       id: "integrations",
       label: "Swiggy & Zomato",
       sublabel: "2-Way Sync Engine",
-      iconBg: "bg-[#FDF2F8]",
-      iconColor: "text-pink-600",
+      iconBg: "bg-[#FFF3EF]",
+      iconColor: "text-[#FF4F18]",
       iconSvg: (
         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.61 9.51m5.98 4.86a14.98 14.98 0 01-6.16 12.12A14.978 14.978 0 012.25 12c0-8.3 6.7-15 15-15h.75v.75c0 8.3-6.7 15-15 15z" />
@@ -121,14 +121,14 @@ export default function RadialCommandCenter() {
   return (
     <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
       {/* Header Block */}
-      <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 animate-fade-in">
+      <div className="text-left mb-12 md:mb-16 animate-fade-in">
         <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-3">
           Radial Command Center
         </span>
-        <h2 className="text-3xl sm:text-[38px] md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
           The Centralized <span className="text-[#FF4F18]">Restaurant Brain</span>
         </h2>
-        <p className="text-sm md:text-base text-zinc-500 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-650 leading-relaxed">
           Click any module around the central Digitory brain to inspect real-time performance indicators and operational metrics.
         </p>
       </div>
@@ -171,7 +171,7 @@ export default function RadialCommandCenter() {
 
         {/* Right Column: Module Inspector Panel */}
         <div className="lg:col-span-5 flex">
-          <div className="w-full bg-[#FAF6F0] rounded-[32px] p-8 border border-orange-100/50 flex flex-col justify-between gap-8 select-none transition-all duration-300 shadow-2xs">
+          <div className="w-full bg-[#FAF6F0] rounded-2xl p-8 border border-orange-100/50 flex flex-col justify-between gap-8 select-none transition-all duration-300 shadow-2xs">
             
             {/* Top Inspector Status info */}
             <div className="flex flex-col gap-6">
@@ -179,8 +179,8 @@ export default function RadialCommandCenter() {
                 <span className="text-[10px] font-extrabold tracking-widest text-[#FF4F18] uppercase">
                   Module Inspector
                 </span>
-                <div className="flex items-center gap-1.5 bg-[#EAF9F0] px-2.5 py-1 rounded-full text-[10px] font-extrabold text-teal-600 uppercase tracking-wider">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" />
+                <div className="flex items-center gap-1.5 bg-[#FFF3EF] border border-[#FF4F18]/20 px-2.5 py-1 rounded-full text-[10px] font-extrabold text-[#FF4F18] uppercase tracking-wider">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF4F18] animate-pulse" />
                   Connected
                 </div>
               </div>
@@ -195,8 +195,8 @@ export default function RadialCommandCenter() {
               </div>
             </div>
 
-            {/* Bottom Inspector Metric Highlight */}
-            <div className="bg-white rounded-2xl p-6 border border-zinc-150 flex flex-col items-center justify-center text-center shadow-3xs">
+            {/* Bottom Inspector Metric Highlight - Square Base */}
+            <div className="bg-white rounded-xl p-8 border border-zinc-200 flex flex-col items-center justify-center text-center shadow-3xs min-h-[160px]">
               <span className="text-4xl md:text-5xl font-black text-[#FF4F18] leading-none mb-2">
                 {activeModule.metricValue}
               </span>

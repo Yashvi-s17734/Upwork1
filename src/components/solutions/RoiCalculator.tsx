@@ -64,17 +64,17 @@ export default function RoiCalculator() {
   }, [orders, outlets]);
 
   return (
-    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10 text-center">
+    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
       
       {/* Header Block */}
-      <div className="max-w-2xl mx-auto mb-10 md:mb-12">
+      <div className="text-left mb-10 md:mb-12">
         <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-3">
           ROI Calculator & Outcomes
         </span>
-        <h2 className="text-3xl sm:text-[38px] md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
           Calculate your <span className="text-[#FF4F18]">Monthly Savings</span>
         </h2>
-        <p className="text-sm md:text-base text-zinc-500 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-650 leading-relaxed">
           Adjust the sliders below to estimate how much food waste and labor hours Digitory saves for your business.
         </p>
       </div>

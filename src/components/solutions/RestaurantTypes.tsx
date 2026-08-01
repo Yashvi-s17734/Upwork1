@@ -11,22 +11,22 @@ interface TypeData {
 export default function RestaurantTypes() {
   const types: Record<string, TypeData> = {
     "Fine Dining": {
-      innerBadge: "🍷 PREMIUM DINING SUITE",
+      innerBadge: "PREMIUM DINING SUITE",
       title: "Fine Dining & Casual Restaurants",
       description: "Seamless table management, course timing, sommelier notes, and captain app for unforgettable dining experiences.",
     },
     "QSR": {
-      innerBadge: "⚡ FAST QSR SUITE",
+      innerBadge: "FAST QSR SUITE",
       title: "Quick Service Restaurants (QSR)",
       description: "Lightning-fast billing, kitchen display sync, token systems, and self-ordering kiosks to handle long lines easily.",
     },
     "Cloud Kitchen": {
-      innerBadge: "☁ CLOUD KITCHEN SUITE",
+      innerBadge: "CLOUD KITCHEN SUITE",
       title: "Cloud Kitchens & Delivery Brands",
       description: "2-way integrations with Swiggy and Zomato, automated order dispatching, unified menu pushes, and central inventory management.",
     },
     "Café": {
-      innerBadge: "☕ COFFEE & BAKERY SUITE",
+      innerBadge: "COFFEE & BAKERY SUITE",
       title: "Cafés, Bakeries & Quick Bites",
       description: "Customized order billing modifiers, combo items, loyalty reward programs, and offline-first terminal reliability.",
     },
@@ -35,50 +35,33 @@ export default function RestaurantTypes() {
   const [activeTab, setActiveTab] = useState<string>("Fine Dining");
   const activeData = types[activeTab];
 
-  // Helper icons for the tabs
-  const getTabIcon = (tabName: string) => {
-    switch (tabName) {
-      case "Fine Dining":
-        return "🍷 ";
-      case "QSR":
-        return "⚡ ";
-      case "Cloud Kitchen":
-        return "☁ ";
-      case "Café":
-        return "☕ ";
-      default:
-        return "";
-    }
-  };
-
   return (
-    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10 text-center">
+    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
       
       {/* Header Block */}
-      <div className="max-w-2xl mx-auto mb-10 md:mb-12">
+      <div className="text-left mb-10 md:mb-12">
         <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-3">
           F&B Model Tailored
         </span>
-        <h2 className="text-3xl sm:text-[38px] md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
           Built for <span className="text-[#FF4F18]">your restaurant type</span>
         </h2>
       </div>
 
       {/* Category Tab Selector */}
-      <div className="flex flex-wrap justify-center gap-2.5 mb-12">
+      <div className="flex flex-wrap justify-start gap-2.5 mb-12">
         {Object.keys(types).map((tabName) => {
           const isActive = activeTab === tabName;
           return (
             <button
               key={tabName}
               onClick={() => setActiveTab(tabName)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer flex items-center ${
                 isActive
                   ? "bg-[#FF4F18] text-white shadow-[0_4px_12px_rgba(255,79,24,0.25)]"
                   : "bg-[#F8F9FA] text-zinc-700 hover:bg-[#F1F3F5] border border-zinc-200/60"
               }`}
             >
-              <span>{getTabIcon(tabName)}</span>
               {tabName}
             </button>
           );

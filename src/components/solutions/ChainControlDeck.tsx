@@ -17,38 +17,38 @@ export default function ChainControlDeck() {
     "Chain Overview": {
       title: "Chain Overview (4 Outlets)",
       statusBadge: "4 / 4 Outlets Online",
-      statusColor: "text-emerald-600 border-emerald-100 bg-white",
+      statusColor: "text-[#FF4F18] border-orange-100 bg-white",
       badgeBg: "bg-white",
       revenue: "₹ 14,85,200",
       metricLabel: "↑ Consolidated Real-Time Sync",
-      metricColor: "text-emerald-600",
+      metricColor: "text-[#FF4F18]",
     },
     "Mumbai Flagship": {
       title: "Mumbai Flagship Outlet",
       statusBadge: "Online",
-      statusColor: "text-teal-600 border-teal-100 bg-white",
+      statusColor: "text-[#FF4F18] border-orange-100 bg-white",
       badgeBg: "bg-white",
       revenue: "₹ 5,42,800",
       metricLabel: "↑ 12% increase from yesterday",
-      metricColor: "text-teal-600",
+      metricColor: "text-[#FF4F18]",
     },
     "Delhi QSR": {
       title: "Delhi QSR Outlet",
       statusBadge: "Online",
-      statusColor: "text-amber-600 border-amber-100 bg-white",
+      statusColor: "text-[#FF4F18] border-orange-100 bg-white",
       badgeBg: "bg-white",
       revenue: "₹ 4,12,400",
       metricLabel: "↑ Peak hour sales active",
-      metricColor: "text-amber-600",
+      metricColor: "text-[#FF4F18]",
     },
     "Bangalore Cloud": {
       title: "Bangalore Cloud Kitchen",
       statusBadge: "Online",
-      statusColor: "text-blue-600 border-blue-100 bg-white",
+      statusColor: "text-[#FF4F18] border-orange-100 bg-white",
       badgeBg: "bg-white",
       revenue: "₹ 5,30,000",
       metricLabel: "↑ High order volume",
-      metricColor: "text-blue-600",
+      metricColor: "text-[#FF4F18]",
     },
   };
 
@@ -69,14 +69,14 @@ export default function ChainControlDeck() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl sm:text-[44px] md:text-[52px] font-[850] tracking-tight text-[#111111] leading-[1.05]">
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15]">
             One Dashboard.
             <br />
             <span className="text-[#FF4F18]">Every location in sync.</span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-zinc-650 leading-relaxed max-w-xl">
+          <p className="text-base md:text-lg text-zinc-650 leading-relaxed max-w-xl">
             Monitor revenue, stock transfers, and store health across cities directly from your smartphone.
           </p>
 

@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import Header from '../component/header/page';
-import FooterPage from '../component/footer/page';
-import ScrollFocusWrapper from '../component/ScrollFocusWrapper';
+import Header from '../../components/Header';
+import FooterPage from '../../components/Footer';
+import ScrollFocusWrapper from '../../components/ScrollFocusWrapper';
 
-import RestaurantOSHero from '../component/solutions/RestaurantOSHero';
-import RadialCommandCenter from '../component/solutions/RadialCommandCenter';
-import Capabilities from '../component/solutions/Capabilities';
-import ChainControlDeck from '../component/solutions/ChainControlDeck';
-import RestaurantTypes from '../component/solutions/RestaurantTypes';
-import RoiCalculator from '../component/solutions/RoiCalculator';
-import ToolIntegrations from '../component/solutions/ToolIntegrations';
-import SolutionsCta from '../component/solutions/SolutionsCta';
+import RestaurantOSHero from '../../components/solutions/RestaurantOSHero';
+import RadialCommandCenter from '../../components/solutions/RadialCommandCenter';
+import Capabilities from '../../components/solutions/Capabilities';
+import ChainControlDeck from '../../components/solutions/ChainControlDeck';
+import RestaurantTypes from '../../components/solutions/RestaurantTypes';
+import RoiCalculator from '../../components/solutions/RoiCalculator';
+import ToolIntegrations from '../../components/solutions/ToolIntegrations';
+import SolutionsCta from '../../components/solutions/SolutionsCta';
 
 export default function SolutionsPage() {
   return (
@@ -25,34 +25,34 @@ export default function SolutionsPage() {
         <ScrollFocusWrapper>
           <RestaurantOSHero />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <RadialCommandCenter />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <Capabilities />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <ChainControlDeck />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <RestaurantTypes />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <RoiCalculator />
         </ScrollFocusWrapper>
-        
+
         <ScrollFocusWrapper>
           <ToolIntegrations />
         </ScrollFocusWrapper>
-        
-        <ScrollFocusWrapper>
+
+        {/* <ScrollFocusWrapper>
           <SolutionsCta />
-        </ScrollFocusWrapper>
+        </ScrollFocusWrapper> */}
       </main>
 
       {/* Footer */}

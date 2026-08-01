@@ -3,8 +3,8 @@
 import React, { useState, useEffect, use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../../component/header/page';
-import FooterPage from '../../component/footer/page';
+import Header from '../../../components/Header';
+import FooterPage from '../../../components/Footer';
 import { getArticleBySlug, ARTICLES_DATA } from '../../data/blogData';
 
 interface BlogDetailPageProps {
@@ -109,13 +109,13 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pb-8">
             {/* Left 7 columns: Main Title */}
             <div className="lg:col-span-7">
-              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-semibold leading-[1.15] text-zinc-900 dark:text-white tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-[850] leading-[1.15] text-[#111111] dark:text-white tracking-tight">
                 {article.title}
               </h1>
             </div>
 
             {/* Right 5 columns: Intro Text */}
-            <div className="lg:col-span-5 text-sm md:text-base text-zinc-600 dark:text-zinc-300 space-y-4 leading-relaxed font-normal">
+            <div className="lg:col-span-5 text-base md:text-lg text-zinc-650 dark:text-zinc-300 space-y-4 leading-relaxed font-normal">
               <p>{article.introText}</p>
               <p>{article.secondaryIntro}</p>
             </div>
@@ -252,16 +252,16 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
               {/* Sections */}
               {article.sections.map((section) => (
                 <section key={section.id} id={section.id} className="scroll-mt-28 space-y-4">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-zinc-900 dark:text-white tracking-tight">
+                  <h2 className="text-xl sm:text-2xl font-[850] text-[#111111] dark:text-white tracking-tight">
                     {section.heading}
                   </h2>
                   {section.paragraphs.map((para, idx) => (
-                    <p key={idx} className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                    <p key={idx} className="text-zinc-650 dark:text-zinc-300 leading-relaxed">
                       {para}
                     </p>
                   ))}
                   {section.bulletPoints && (
-                    <ul className="list-disc pl-5 space-y-2 text-zinc-700 dark:text-zinc-300 pt-2">
+                    <ul className="list-disc pl-5 space-y-2 text-zinc-650 dark:text-zinc-300 pt-2">
                       {section.bulletPoints.map((item, bIdx) => (
                         <li key={bIdx}>{item}</li>
                       ))}
@@ -270,11 +270,9 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                 </section>
               ))}
 
-
-
               {/* Discussion / Comments Section */}
               <div className="pt-10 mt-12 border-t border-zinc-200/60 dark:border-zinc-800/60 space-y-6">
-                <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-tight">
+                <h3 className="text-xl font-[850] text-[#111111] dark:text-white tracking-tight">
                   Discussion ({comments.length})
                 </h3>
 
@@ -297,10 +295,10 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
 
                       {/* Content */}
                       <div>
-                        <h4 className="text-base font-semibold text-zinc-900 dark:text-white">
+                        <h4 className="text-base font-bold text-[#111111] dark:text-white">
                           {comment.name}
                         </h4>
-                        <p className="text-xs text-zinc-400 dark:text-zinc-500 mb-1">
+                        <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 mb-1">
                           {comment.date}
                         </p>
                         <p className="text-xs text-zinc-650 dark:text-zinc-400 leading-relaxed font-normal">
@@ -313,7 +311,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
 
                 {/* Add Comment Form */}
                 <form onSubmit={handleAddComment} className="flex flex-col gap-4 pt-4">
-                  <h4 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider">
+                  <h4 className="text-xs font-extrabold text-[#FF4F18] uppercase tracking-widest">
                     Add a comment
                   </h4>
                   
@@ -324,7 +322,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                       onChange={(e) => setNewCommentName(e.target.value)}
                       placeholder="Your Name"
                       required
-                      className="w-full max-w-sm px-4 py-2.5 text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-[#FF4F18] shadow-2xs font-medium"
+                      className="w-full max-w-sm px-4 py-3 text-xs font-medium rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-[#F8F9FA] dark:bg-zinc-900 text-[#111111] dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:border-[#FF4F18] focus:ring-1 focus:ring-[#FF4F18] shadow-2xs"
                     />
                     
                     <textarea
@@ -333,13 +331,13 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                       placeholder="Share your thoughts..."
                       required
                       rows={4}
-                      className="w-full px-4 py-3 text-sm rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-[#FF4F18] shadow-2xs font-medium resize-none"
+                      className="w-full px-4 py-3 text-xs font-medium rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-[#F8F9FA] dark:bg-zinc-900 text-[#111111] dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:border-[#FF4F18] focus:ring-1 focus:ring-[#FF4F18] shadow-2xs resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="px-6 py-3 bg-[#FF4F18] hover:bg-[#e04313] text-white text-xs uppercase tracking-widest font-extrabold rounded-xl transition-all duration-200 cursor-pointer self-start shadow-xs hover:shadow-sm"
+                    className="px-7 py-3.5 bg-[#FF4F18] hover:bg-[#E03F0D] text-white text-xs font-bold rounded-full transition-all duration-200 cursor-pointer self-start shadow-[0_8px_20px_rgba(255,79,24,0.35)]"
                   >
                     Post Comment
                   </button>
@@ -351,8 +349,8 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
           {/* Similar Articles Section */}
           {similarArticles.length > 0 && (
             <div className="mt-20 pt-12 border-t border-zinc-200/60 dark:border-zinc-800/60">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-8">
-                Similar articles
+              <h2 className="text-3xl sm:text-4xl font-[850] tracking-tight text-[#111111] dark:text-white mb-8">
+                Similar <span className="text-[#FF4F18]">Articles</span>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {similarArticles.map((simArticle) => (
@@ -361,21 +359,21 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                     href={`/blog/${simArticle.slug}`}
                     className="group flex flex-col"
                   >
-                    <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-3.5 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+                    <div className="relative aspect-16/10 w-full overflow-hidden rounded-[24px] bg-zinc-100 dark:bg-zinc-900 mb-3.5 border border-zinc-200/60 dark:border-zinc-800/60 shadow-2xs">
                       <Image
                         src={encodeURI(simArticle.image)}
                         alt={simArticle.title}
                         fill
                         className="object-cover group-hover:scale-102 transition-transform duration-300"
                       />
-                      <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xs text-[10px] font-semibold text-zinc-800 dark:text-zinc-200">
+                      <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-full bg-[#FFF3EF] dark:bg-zinc-900/90 text-[10px] font-extrabold text-[#FF4F18] border border-orange-100 dark:border-transparent">
                         {simArticle.category}
                       </span>
                     </div>
-                    <h3 className="text-sm font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2 line-clamp-2">
+                    <h3 className="text-sm font-extrabold leading-snug text-[#111111] dark:text-white group-hover:text-[#FF4F18] transition-colors mb-2 line-clamp-2">
                       {simArticle.title}
                     </h3>
-                    <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
+                    <p className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 mt-auto">
                       {simArticle.date}
                     </p>
                   </Link>
