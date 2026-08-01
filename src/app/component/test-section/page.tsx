@@ -7,31 +7,31 @@ export default function TestSection() {
     {
       num: 1,
       title: 'Orders synced',
-      desc: 'Every order, in real time.',
+      desc: 'Every order is updated instantly.',
       highlighted: false,
     },
     {
       num: 2,
       title: 'Inventory updated',
-      desc: 'Always stock-aware.',
+      desc: 'Always know what\'s in stock.',
       highlighted: false,
     },
     {
       num: 3,
       title: 'Live sales',
-      desc: "Know what's selling, now.",
+      desc: "See what's selling in real time.",
       highlighted: false,
     },
     {
       num: 4,
       title: 'Kitchen status',
-      desc: 'Every order on track.',
+      desc: 'Track every order from start to finish.',
       highlighted: false,
     },
     {
       num: 5,
       title: 'Outlet performance',
-      desc: 'One view. Every outlet.',
+      desc: 'Monitor all your outlets from one dashboard.',
       highlighted: true,
     },
   ];
@@ -82,9 +82,8 @@ export default function TestSection() {
       <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Heading */}
         <h2 className="text-center text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-10 md:mb-12">
-          Can your outlet pass the
-          <br />
-          <span className="text-[#FF4F18]">Saturday night</span> test?
+          Can your restaurant handle a busy          <br />
+          <span className="text-[#FF4F18]">Saturday night</span>?
         </h2>
 
         {/* 2-Column Grid */}
@@ -93,7 +92,8 @@ export default function TestSection() {
           {/* Left: WhatsApp Mockup Image */}
           <div className="lg:col-span-6 flex justify-center w-full">
             <div className="w-full max-w-[440px] rounded-[32px] bg-[#F0EBE3] shadow-2xl overflow-hidden relative">
-              <style dangerouslySetInnerHTML={{ __html: `
+              <style dangerouslySetInnerHTML={{
+                __html: `
                 @keyframes msgPop0 {
                   0% { opacity: 0; transform: translateY(15px) scale(0.97); }
                   3% { opacity: 1; transform: translateY(0) scale(1); }

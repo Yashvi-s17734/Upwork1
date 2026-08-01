@@ -66,15 +66,14 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.1]">
-            Manage chaos hours,
+            Manage busy hours with ease
             <br />
-            <span className="text-[#FF4F18]">not chaos.</span>
+            {/* <span className="text-[#FF4F18]">not chaos.</span> */}
           </h1>
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg text-zinc-600 max-w-xl leading-relaxed">
-            From billing and inventory to customer loyalty and reporting, we help you operate smarter and grow profitably
-          </p>
+            From billing and inventory to customer loyalty and reports, Digitory helps you run your restaurant smoothly and grow your business.          </p>
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 items-center">

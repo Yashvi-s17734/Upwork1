@@ -74,18 +74,15 @@ export default function Header() {
     <div className="sticky top-0 z-50 w-full px-4 pt-3 pb-1 md:px-8 md:pt-4 md:pb-2 bg-transparent">
       <header className="mx-auto max-w-7xl rounded-full bg-[#EAEAEA]/80 backdrop-blur-md pl-8 pr-4 py-3 flex items-center justify-between shadow-sm">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/demologo.png"
+            src="/logo.png"
             alt="Digitory Logo"
-            width={28}
+            width={112}
             height={28}
             className="h-7 w-auto object-contain"
             priority
           />
-          <span className="text-[20px] font-extrabold tracking-tight text-black">
-            Digitory
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -32,17 +32,15 @@ export default function FooterPage() {
 
           {/* Logo & Description Column */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="flex items-center gap-2.5">
-              {/* Custom Orange Pixel Logo */}
+            <div className="flex items-center">
               <Image
-                src="/demologo.png"
+                src="/logo.png"
                 alt="Digitory Logo"
-                width={28}
+                width={112}
                 height={28}
-                className="h-7 w-auto object-contain"
+                className="h-7 w-auto object-contain invert hue-rotate-180"
                 priority
               />
-              <span className="font-extrabold text-white text-[19px] tracking-tight">Digitory</span>
             </div>
 
             <p className="text-[14px] text-[#888888] leading-relaxed max-w-[260px]">

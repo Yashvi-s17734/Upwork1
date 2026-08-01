@@ -8,42 +8,42 @@ export default function Features() {
     {
       num: '01',
       title: 'Orders & billing',
-      desc: 'From dine-in to online and direct orders, every bill, every payment and every table flows through one seamless system.',
+      desc: 'Manage dine-in, takeaway, online, and QR orders in one place. Billing is quick, simple, and accurate.',
       borderClasses: 'border-b border-zinc-200 md:border-r md:border-b',
       imageSrc: '/image4.png',
     },
     {
       num: '02',
       title: 'Kitchen display system',
-      desc: 'Every order reaches the right station instantly. Less shouting. Less confusion. Faster service.',
+      desc: 'Orders go straight to the right kitchen station. No paper. No shouting. No confusion.',
       borderClasses: 'border-b border-zinc-200 md:border-r md:border-b',
       imageSrc: '/image 6.png',
     },
     {
       num: '03',
-      title: 'Inventory that thinks ahead',
-      desc: "Every dish updates your inventory automatically. Know what's running low before your chef does.",
+      title: 'Smart Inventory',
+      desc: "Every order automatically updates your stock. Know what's running low before it becomes a problem.",
       borderClasses: 'border-b border-zinc-200 md:border-b-0 md:border-r-0',
       imageSrc: '/image 7.png',
     },
     {
       num: '04',
-      title: 'Live business dashboard',
-      desc: 'Sales. Orders. Inventory. Outlet performance. Everything you need to know, in one place, in real time.',
+      title: 'Live dashboard',
+      desc: 'View sales, orders, inventory, and outlet performance anytime from one screen.',
       borderClasses: 'border-b border-zinc-200 md:border-b-0 md:border-r',
       imageSrc: '/image 8.png',
     },
     {
       num: '05',
-      title: 'Every order. One flow.',
-      desc: 'No switching between apps. No missed tickets. Every online and offline order stays connected from start to finish.',
+      title: 'One order flow',
+      desc: 'Manage Swiggy, Zomato, QR, and dine-in orders together without switching between different apps.',
       borderClasses: 'border-b border-zinc-200 md:border-b-0 md:border-r',
       imageSrc: '/image 9.png',
     },
     {
       num: '06',
       title: 'Multi-outlet management',
-      desc: "Whether you're managing one outlet or twenty, get complete visibility without chasing managers or waiting for reports.",
+      desc: 'Manage one outlet or many.View reports and performance from one dashboard.',
       borderClasses: 'border-b-0',
       imageSrc: '/image 10.png',
     },
@@ -60,16 +60,16 @@ export default function Features() {
           {/* Heading */}
           <div className="lg:col-span-7">
             <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15]">
-              When every second counts,
+              When your restaurant gets busy,
               <br />
-              <span className="text-[#FF4F18]"> every system should too.</span>
+              <span className="text-[#FF4F18]"> Digitory keeps everything running smoothly.</span>
             </h2>
           </div>
 
           {/* Description & Action */}
           <div className="lg:col-span-5 flex flex-col items-start gap-6">
             <p className="text-zinc-650 text-base md:text-lg leading-relaxed max-w-md">
-              Connect every moving part of your restaurant, so orders, kitchens, inventory and reports stay perfectly in sync, even during your busiest hours.
+              Connect your orders, kitchen, inventory, billing, and reports in one platform so your team can work faster and make fewer mistakes.
             </p>
             <Link
               href="#"

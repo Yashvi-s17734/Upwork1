@@ -7,22 +7,22 @@ export default function Stats() {
     {
       value: '30%',
       label: 'Less Wastage',
-      desc: 'Better inventory visibility and tracking',
+      desc: 'Keep better track of your inventory and reduce food waste',
     },
     {
       value: '2x',
       label: 'Faster Decision Making',
-      desc: 'Real-time reports across outlets',
+      desc: 'View live reports from all your outlets in one place',
     },
     {
       value: '100%',
       label: 'Operational Visibility',
-      desc: 'From orders to inventory to customer data',
+      desc: 'Track orders, inventory, sales, and customer data in real time',
     },
     {
       value: '1',
       label: 'Connected System',
-      desc: 'No more switching between 10 tools',
+      desc: ' Manage everything from one system instead of using multiple apps',
     },
   ];
 
@@ -34,7 +34,7 @@ export default function Stats() {
       <section className="mx-auto max-w-7xl px-6 md:px-8 py-10 md:py-16">
         {/* Section Heading */}
         <h2 className="text-center text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-16 md:mb-20">
-          Be chaos-hour ready, <span className="text-[#FF4F18]">always</span>
+          Stay ready for your busiest hours, <span className="text-[#FF4F18]">always</span>
         </h2>
 
         {/* Stats Grid */}
@@ -46,10 +46,10 @@ export default function Stats() {
             >
               <h3 className="text-2xl md:text-3xl font-bold leading-tight max-w-[220px]">
                 <span className="text-[#FF4F18]">{stat.value}</span>{" "}
-                
+
               </h3>
- <h3 className="text-2xl md:text-3xl font-bold leading-tight max-w-[220px]">
-                
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight max-w-[220px]">
+
                 <span className="text-[#111111]">{stat.label}</span>
               </h3>
               <p className="text-black text-sm mt-3 max-w-[220px] leading-relaxed">

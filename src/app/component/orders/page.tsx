@@ -11,64 +11,100 @@ const TABS = [
 ];
 
 const INITIAL_ORDERS = [
-  { id: 1, text: "Table 4 — Butter Chicken x2", time: "8 min", status: "cooking", dotColor: "bg-[#FF4C22]" },
-  { id: 2, text: "Zomato #9042 — Biryani x3", time: "12 min", status: "cooking", dotColor: "bg-[#3B82F6]" },
-  { id: 3, text: "Table 11 — Tandoori Platter", time: "Served", status: "served", dotColor: "bg-[#10B981]" },
-  { id: 4, text: "Table 8 — Dal Makhani x2", time: "5 min", status: "cooking", dotColor: "bg-[#EF4444]" },
-  { id: 5, text: "Swiggy #7831 — Paneer Set", time: "3 min", status: "warning", dotColor: "bg-[#EF4444]", hasWarning: true },
+  {
+    id: 1,
+    text: "Table 4 — Butter Chicken x2",
+    time: "8 min",
+    status: "cooking",
+    dotColor: "bg-[#FF4C22]",
+  },
+  {
+    id: 2,
+    text: "Zomato #9042 — Biryani x3",
+    time: "12 min",
+    status: "cooking",
+    dotColor: "bg-[#3B82F6]",
+  },
+  {
+    id: 3,
+    text: "Table 11 — Tandoori Platter",
+    time: "Served",
+    status: "served",
+    dotColor: "bg-[#10B981]",
+  },
+  {
+    id: 4,
+    text: "Table 8 — Dal Makhani x2",
+    time: "5 min",
+    status: "cooking",
+    dotColor: "bg-[#EF4444]",
+  },
+  {
+    id: 5,
+    text: "Swiggy #7831 — Paneer Set",
+    time: "3 min",
+    status: "warning",
+    dotColor: "bg-[#EF4444]",
+    hasWarning: true,
+  },
 ];
 
 const TAB_DATA = {
   orders: {
-    heading: "Orders move. Your team doesn't have to.",
-    description: "Every order — dine-in, delivery, or QR — reaches the right kitchen station instantly. No paper. No shouting.",
+    heading: "Every order. One smooth process.",
+    description:
+      "Whether it's dine-in, QR, or delivery, every order reaches the kitchen instantly.",
     bullets: [
-      "Every order, one workflow",
-      "Swiggy, Zomato, QR & dine-in synced automatically",
-      "Faster billing. Shorter queues.",
-      "No switching between apps or chasing tickets"
-    ]
+      "One system for every order",
+      "Online delivery, QR, and dine-in connected",
+      "Faster billing and shorter queues.",
+      "No switching between apps",
+    ],
   },
   kitchen: {
     heading: "The kitchen stays in sync. Even when it's packed.",
-    description: "Orders reach the right station instantly, helping your team cook faster, communicate better and serve without confusion.",
+    description:
+      "Orders reach the right station instantly, helping your team cook faster, communicate better and serve without confusion.",
     bullets: [
       "Instant KDS updates",
       "No missed or duplicate orders",
       "Faster table turnaround",
-      "Less shouting. More serving."
-    ]
+      "Less shouting. More serving.",
+    ],
   },
   inventory: {
     heading: "Know what's running low. Before your chef does.",
-    description: "Every order updates inventory automatically, giving you complete control over stock, wastage and margins.",
+    description:
+      "Every order updates inventory automatically, giving you complete control over stock, wastage and margins.",
     bullets: [
       "Live inventory tracking",
       "Automatic ingredient deduction",
       "Reduce wastage and stock-outs",
-      "Protect every margin"
-    ]
+      "Protect every margin",
+    ],
   },
   "owner-view": {
     heading: "Stop asking, start knowing.",
-    description: "Live insights across sales, orders and performance help you make smarter decisions without waiting for end-of-day reports.",
+    description:
+      "Live insights across sales, orders and performance help you make smarter decisions without waiting for end-of-day reports.",
     bullets: [
       "Live sales dashboard",
       "Best-selling items",
       "Peak hour insights",
-      "Real-time business health"
-    ]
+      "Real-time business health",
+    ],
   },
   "multi-outlet": {
     heading: "One dashboard, every outlet.",
-    description: "Whether you have one restaurant or twenty, manage every location from one place with complete visibility.",
+    description:
+      "Whether you have one restaurant or twenty, manage every location from one place with complete visibility.",
     bullets: [
       "Compare outlet performance",
       "Track sales in real time",
       "Spot operational issues early",
-      "Scale with confidence"
-    ]
-  }
+      "Scale with confidence",
+    ],
+  },
 };
 
 export default function OrdersPage() {
@@ -77,21 +113,34 @@ export default function OrdersPage() {
 
   // Toggle order status to showcase high-fidelity interactivity
   const handleToggleStatus = (id: number) => {
-    setOrders(prev =>
-      prev.map(order => {
+    setOrders((prev) =>
+      prev.map((order) => {
         if (order.id === id) {
           if (order.status === "served") {
-            return { ...order, status: "cooking", time: "1 min", dotColor: "bg-[#EF4444]", hasWarning: false };
+            return {
+              ...order,
+              status: "cooking",
+              time: "1 min",
+              dotColor: "bg-[#EF4444]",
+              hasWarning: false,
+            };
           } else {
-            return { ...order, status: "served", time: "Served", dotColor: "bg-[#10B981]", hasWarning: false };
+            return {
+              ...order,
+              status: "served",
+              time: "Served",
+              dotColor: "bg-[#10B981]",
+              hasWarning: false,
+            };
           }
         }
         return order;
-      })
+      }),
     );
   };
 
-  const activeTabContent = TAB_DATA[activeTab as keyof typeof TAB_DATA] || TAB_DATA.orders;
+  const activeTabContent =
+    TAB_DATA[activeTab as keyof typeof TAB_DATA] || TAB_DATA.orders;
 
   return (
     <div className="bg-[#F8F9FA] font-sans antialiased">
@@ -102,7 +151,7 @@ export default function OrdersPage() {
           <div className="mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight leading-[1.15] text-[#111111]">
               Built for restaurants that <br />
-              <span className="text-[#FF4F18]">don&apos;t stop moving.</span>
+              <span className="text-[#FF4F18]">never slow down</span>
             </h2>
           </div>
 
@@ -117,9 +166,10 @@ export default function OrdersPage() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`
                       py-4 text-[15px] font-semibold transition-all duration-200 outline-none whitespace-nowrap cursor-pointer
-                      ${isActive
-                        ? "text-black border-b-[2.5px] border-black"
-                        : "text-[#999999] hover:text-zinc-600 border-b-[2.5px] border-transparent"
+                      ${
+                        isActive
+                          ? "text-black border-b-[2.5px] border-black"
+                          : "text-[#999999] hover:text-zinc-600 border-b-[2.5px] border-transparent"
                       }
                     `}
                   >
@@ -138,7 +188,6 @@ export default function OrdersPage() {
       <main className="w-full py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-
             {/* Left Column - Headline & Key Benefits */}
             <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
               <div className="space-y-4">
@@ -155,8 +204,16 @@ export default function OrdersPage() {
                 {activeTabContent.bullets.map((item, index) => (
                   <li key={index} className="flex items-center gap-4 group">
                     <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black text-white flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
-                      <svg className="w-3 h-3 stroke-[3] stroke-white" fill="none" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      <svg
+                        className="w-3 h-3 stroke-[3] stroke-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12.75l6 6 9-13.5"
+                        />
                       </svg>
                     </span>
                     <span className="text-black font-semibold text-[15px] group-hover:text-zinc-800 transition-colors">
@@ -201,7 +258,9 @@ export default function OrdersPage() {
                         `}
                       >
                         <div className="flex items-center min-w-0 pr-4">
-                          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${order.dotColor}`} />
+                          <span
+                            className={`w-2 h-2 rounded-full flex-shrink-0 ${order.dotColor}`}
+                          />
                           <span className="ml-3.5 text-[14px] font-semibold text-[#111111] truncate">
                             {order.text}
                           </span>
@@ -215,8 +274,16 @@ export default function OrdersPage() {
                           ) : isWarning ? (
                             <span className="text-[#FF3B30] font-bold text-[13px] flex items-center gap-1">
                               {order.time}
-                              <svg className="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                              <svg
+                                className="w-4 h-4 text-amber-500 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                                  clipRule="evenodd"
+                                />
                               </svg>
                             </span>
                           ) : (
