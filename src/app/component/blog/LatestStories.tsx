@@ -204,55 +204,53 @@ export default function LatestStories({
       ) : (
         /* Default Layout matching exact reference image */
         <div className="space-y-12 md:space-y-16">
-          {/* Row 1: Featured Main + 2 Stacked Side Stories */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Big Main Left Card */}
+          {/* Row 1: 3 Equal Top Stories */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Main Article */}
             <Link
               href={`/blog/${mainArticle.slug}`}
-              className="lg:col-span-8 group flex flex-col"
+              className="group flex flex-col"
             >
-              <div className="relative aspect-16/9 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+              <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
                 <Image
                   src={encodeURI(mainArticle.image)}
                   alt={mainArticle.title}
                   fill
-                  className="object-cover group-hover:scale-102 transition-transform duration-300"
+                  className="object-cover group-hover:scale-103 transition-transform duration-300"
                   priority
                 />
               </div>
-              <h3 className="text-xl sm:text-2xl font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+              <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
                 {mainArticle.title}
               </h3>
-              <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-500">
+              <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
                 {mainArticle.date}
               </p>
             </Link>
 
-            {/* Right Stacked 2 Cards */}
-            <div className="lg:col-span-4 flex flex-col gap-8">
-              {topSideArticles.map((article) => (
-                <Link
-                  key={article.id}
-                  href={`/blog/${article.slug}`}
-                  className="group flex flex-col"
-                >
-                  <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-3 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
-                    <Image
-                      src={encodeURI(article.image)}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-102 transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-1.5">
-                    {article.title}
-                  </h3>
-                  <p className="text-xs text-zinc-400 dark:text-zinc-500">
-                    {article.date}
-                  </p>
-                </Link>
-              ))}
-            </div>
+            {/* Top Side Articles */}
+            {topSideArticles.map((article) => (
+              <Link
+                key={article.id}
+                href={`/blog/${article.slug}`}
+                className="group flex flex-col"
+              >
+                <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900 mb-4 border border-zinc-200/60 dark:border-zinc-800/60 shadow-xs">
+                  <Image
+                    src={encodeURI(article.image)}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-103 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-base font-medium leading-snug text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors mb-2">
+                  {article.title}
+                </h3>
+                <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-auto">
+                  {article.date}
+                </p>
+              </Link>
+            ))}
           </div>
 
           {/* Row 2 & 3: Medium Cards (2 per row grid) */}
