@@ -34,12 +34,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'How Restaurants, Bars, and Breweries Can Slash Wastage and Unlock Growth Margins in 2025',
     date: 'July 15, 2025',
     category: 'Inventory',
-    image: '/How Restaurants, Bars.png',
+    image: '/How Restaurants, Bars.jpg',
     readTime: '6 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Scaling operational intelligence across 100+ F&B brands with smart automation & inventory management.',
     },
     introText:
@@ -117,12 +117,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Why Restaurants in India Trust Digitory for Smart Operations & Growth',
     date: 'July 8, 2026',
     category: 'Restaurant Operations',
-    image: '/blogpage.png',
+    image: '/blogpage.jpg',
     readTime: '5 min read',
     author: {
       name: 'Priya Sharma',
       role: 'Head of Growth at Digitory',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Helping top F&B brands across India scale seamlessly through data-driven operational intelligence.',
     },
     introText:
@@ -181,7 +181,7 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     ],
     mediaBlock: {
       type: 'image',
-      src: '/blogpage.png',
+      src: '/blogpage.jpg',
       caption: 'Digitory Operational Intelligence Platform in Action',
     },
     similarSlugs: [
@@ -196,12 +196,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Kitchen Automation: How to Future-Proof Restaurant Backends',
     date: 'July 8, 2026',
     category: 'Kitchen',
-    image: '/Kitchen Automation.png',
+    image: '/Kitchen Automation.jpg',
     readTime: '7 min read',
     author: {
       name: 'Rohan Mehta',
       role: 'Kitchen Technology Lead',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Specializing in kitchen display systems, robotic kitchen equipment, and smart prep automation.',
     },
     introText:
@@ -254,7 +254,7 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     ],
     mediaBlock: {
       type: 'image',
-      src: '/Kitchen Automation.png',
+      src: '/Kitchen Automation.jpg',
       caption: 'Automated Kitchen Workflows & Smart Display Displays',
     },
     similarSlugs: [
@@ -269,12 +269,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Data-Driven Kitchen Operations: From Insights to Efficiency',
     date: 'July 18, 2026',
     category: 'Kitchen',
-    image: '/data_driven.png',
+    image: '/data_driven.jpg',
     readTime: '4 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Transforming raw operational metrics into actionable kitchen growth strategies.',
     },
     introText:
@@ -337,12 +337,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'AI-Powered Forecasting: Reducing Food Waste with Predictive Analytics',
     date: 'June 12, 2026',
     category: 'Analytics',
-    image: '/ai_driven_forecasting.png',
+    image: '/ai_driven_forecasting.jpg',
     readTime: '5 min read',
     author: {
       name: 'Dr. Vikram Shah',
       role: 'AI & Data Science Director',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Pioneering predictive analytics models for food waste reduction in commercial kitchens.',
     },
     introText:
@@ -405,12 +405,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Dynamic Pricing for F&B: What It Is and How to Implement It',
     date: 'May 28, 2026',
     category: 'Restaurant Operations',
-    image: '/Dynamic Pricing.png',
+    image: '/Dynamic Pricing.jpg',
     readTime: '6 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Helping F&B brands maximize yield and gross margins through smart pricing strategies.',
     },
     introText:
@@ -471,12 +471,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'How AI Is Transforming Menu Strategy for Modern Restaurants',
     date: 'April 28, 2026',
     category: 'Analytics',
-    image: '/AI is Transforming.png',
+    image: '/AI is Transforming.jpg',
     readTime: '5 min read',
     author: {
       name: 'Priya Sharma',
       role: 'Head of Growth at Digitory',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Leveraging AI menu analytics to optimize guest spend and kitchen profitability.',
     },
     introText:
@@ -537,12 +537,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Smart QR Menus: Dynamic Pricing, Upsell Automation & Allergy Filters',
     date: 'April 21, 2026',
     category: 'Restaurant Operations',
-    image: '/Smart QR Menus.png',
+    image: '/Smart QR Menus.jpg',
     readTime: '5 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Designing digital ordering systems that elevate guest experience and operational speed.',
     },
     introText:
@@ -603,12 +603,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'AI & Automation in F&B: Menu Engineering, Predictive Ordering & Dynamic Pricing',
     date: 'April 5, 2026',
     category: 'Inventory',
-    image: '/AI & Automation in F&B.png',
+    image: '/AI & Automation in F&B.jpg',
     readTime: '6 min read',
     author: {
       name: 'Rohan Mehta',
       role: 'Kitchen Technology Lead',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Integrating artificial intelligence into commercial kitchen and inventory workflows.',
     },
     introText:
@@ -669,12 +669,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Why Smart Restaurants Are Reducing Staff Dependency, Not Just Managing Shifts',
     date: 'March 5, 2026',
     category: 'Restaurant Operations',
-    image: '/Why Smart Restaurants.png',
+    image: '/Why Smart Restaurants.jpg',
     readTime: '5 min read',
     author: {
       name: 'Priya Sharma',
       role: 'Head of Growth at Digitory',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Helping restaurant managers optimize labor models and reduce turnover.',
     },
     introText:
@@ -735,12 +735,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: "Smart Kitchens and Central Kitchens: How India's Top F&B Brands Scale in 2025",
     date: 'March 3, 2026',
     category: 'Kitchen',
-    image: '/Smart Kitchens and Central Kitchens.png',
+    image: '/Smart Kitchens and Central Kitchens.jpg',
     readTime: '6 min read',
     author: {
       name: 'Rohan Mehta',
       role: 'Kitchen Technology Lead',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Architecting central kitchen supply chains and multi-outlet preparation networks.',
     },
     introText:
@@ -801,12 +801,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'How Smart Menu Engineering Boosts Restaurant Profits by 15–25%',
     date: 'January 19, 2026',
     category: 'Analytics',
-    image: '/How Smart Menu.png',
+    image: '/How Smart Menu.jpg',
     readTime: '5 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Optimizing F&B menu design and price elasticity for maximum bottom-line contribution.',
     },
     introText:
@@ -867,12 +867,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'Beyond Points: Native CRM & Loyalty Strategies for F&B Growth',
     date: 'January 19, 2026',
     category: 'Restaurant Operations',
-    image: '/Beyond Point.png',
+    image: '/Beyond Point.jpg',
     readTime: '5 min read',
     author: {
       name: 'Priya Sharma',
       role: 'Head of Growth at Digitory',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Designing customer retention systems that transform one-time diners into brand advocates.',
     },
     introText:
@@ -933,12 +933,12 @@ export const ARTICLES_DATA: Record<string, ArticleData> = {
     title: 'How to Manage and Scale a Microbrewery in India: The Secret Ingredient Behind the Best Brands',
     date: 'January 19, 2026',
     category: 'Restaurant Operations',
-    image: '/How to Manage and Scale a Microbrewery in India.png',
+    image: '/How to Manage and Scale a Microbrewery in India.jpg',
     readTime: '7 min read',
     author: {
       name: 'Anthony Miller',
       role: 'F&B Operations Specialist',
-      avatar: '/demologo.png',
+      avatar: '/demologo.jpg',
       bio: 'Consulting top craft breweries and taprooms on batch tracking and excise compliance.',
     },
     introText:

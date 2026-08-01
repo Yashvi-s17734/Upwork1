@@ -87,6 +87,15 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     }
   };
 
+  const handleInstagramShare = () => {
+    if (typeof window !== 'undefined') {
+      navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+      window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');
+    }
+  };
+
   // Get 4 similar articles
   const similarArticles = article.similarSlugs
     .map((slug) => ARTICLES_DATA[slug])
@@ -171,27 +180,40 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                     <span>{copied ? 'Copied!' : 'Copy Link'}</span>
                   </button>
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}`}
+                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent(article.title + ' - ' + (mounted ? window.location.href : ''))}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-                    aria-label="Share on X"
+                    className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex items-center justify-center"
+                    aria-label="Share on WhatsApp"
+                    title="Share on WhatsApp"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.49-3.921c1.653.98 3.279 1.503 5.467 1.505 5.568 0 10.106-4.537 10.11-10.109.002-2.698-1.046-5.234-2.953-7.14C17.26 2.43 14.74 1.38 12.008 1.38c-5.574 0-10.11 4.537-10.114 10.111-.002 1.95.507 3.85 1.48 5.522l-.974 3.559 3.657-.96zM17.07 14.37c-.274-.137-1.62-.799-1.87-.891-.25-.092-.432-.137-.614.137-.182.274-.705.891-.864 1.074-.159.182-.318.205-.592.068-.274-.137-1.157-.426-2.203-1.36-.814-.726-1.363-1.624-1.523-1.898-.16-.274-.017-.422.12-.559.123-.123.274-.32.411-.479.137-.16.182-.274.274-.457.092-.182.046-.342-.023-.479-.068-.137-.614-1.483-.841-2.03-.22-.53-.444-.457-.61-.465-.157-.008-.339-.009-.52-.009s-.477.068-.727.342c-.25.274-.954.933-.954 2.277 0 1.344.978 2.64 1.085 2.784.109.144 1.925 2.94 4.664 4.122.651.28 1.159.447 1.554.573.654.207 1.25.178 1.722.107.526-.078 1.62-.662 1.849-1.299.227-.638.227-1.187.16-1.299-.068-.112-.25-.183-.524-.32z"/>
                     </svg>
                   </a>
                   <a
                     href={mounted ? `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}` : `https://www.linkedin.com/sharing/share-offsite/?url=`}
                     target="_blank"
                     rel="noreferrer"
-                    className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                    className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex items-center justify-center"
                     aria-label="Share on LinkedIn"
+                    title="Share on LinkedIn"
                   >
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                       <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
                     </svg>
                   </a>
+                  <button
+                    onClick={handleInstagramShare}
+                    type="button"
+                    className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors flex items-center justify-center cursor-pointer"
+                    aria-label="Share on Instagram"
+                    title="Copy link and open Instagram to share"
+                  >
+                    <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </aside>

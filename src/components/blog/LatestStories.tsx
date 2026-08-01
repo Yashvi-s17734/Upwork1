@@ -18,7 +18,7 @@ const mainArticle: Article = {
   slug: 'kitchen-automation-how-to-future-proof-restaurant-backends',
   title: 'Kitchen Automation: How to Future-Proof Restaurant Backends',
   date: 'July 8, 2026',
-  image: '/Kitchen Automation.png',
+  image: '/Kitchen Automation.jpg',
   category: 'Kitchen',
 };
 
@@ -28,7 +28,7 @@ const topSideArticles: Article[] = [
     slug: 'data-driven-kitchen-operations',
     title: 'Data-Driven Kitchen Operations: From Insights to Efficiency',
     date: 'July 18, 2026',
-    image: '/data_driven.png',
+    image: '/data_driven.jpg',
     category: 'Kitchen',
   },
   {
@@ -36,7 +36,7 @@ const topSideArticles: Article[] = [
     slug: 'ai-powered-forecasting-reducing-food-waste',
     title: 'AI-Powered Forecasting: Reducing Food Waste with Predictive Analytics',
     date: 'June 12, 2026',
-    image: '/ai_driven_forecasting.png',
+    image: '/ai_driven_forecasting.jpg',
     category: 'Analytics',
   },
 ];
@@ -47,7 +47,7 @@ const mediumGridArticles: Article[] = [
     slug: 'dynamic-pricing-for-fb',
     title: 'Dynamic Pricing for F&B: What It Is and How to Implement It',
     date: 'May 28, 2026',
-    image: '/Dynamic Pricing.png',
+    image: '/Dynamic Pricing.jpg',
     category: 'Restaurant Operations',
   },
   {
@@ -55,7 +55,7 @@ const mediumGridArticles: Article[] = [
     slug: 'how-ai-is-transforming-menu-strategy',
     title: 'How AI Is Transforming Menu Strategy for Modern Restaurants',
     date: 'April 28, 2026',
-    image: '/AI is Transforming.png',
+    image: '/AI is Transforming.jpg',
     category: 'Analytics',
   },
   {
@@ -63,7 +63,7 @@ const mediumGridArticles: Article[] = [
     slug: 'smart-qr-menus',
     title: 'Smart QR Menus: Dynamic Pricing, Upsell Automation & Allergy Filters | Automated Inventory Management Software',
     date: 'April 21, 2026',
-    image: '/Smart QR Menus.png',
+    image: '/Smart QR Menus.jpg',
     category: 'Restaurant Operations',
   },
   {
@@ -71,7 +71,7 @@ const mediumGridArticles: Article[] = [
     slug: 'ai-and-automation-in-fb',
     title: 'AI & Automation in F&B: Menu Engineering, Predictive Ordering & Dynamic Pricing with Automated Inventory Management Software',
     date: 'April 5, 2026',
-    image: '/AI & Automation in F&B.png',
+    image: '/AI & Automation in F&B.jpg',
     category: 'Inventory',
   },
 ];
@@ -82,7 +82,7 @@ const smallGridArticles: Article[] = [
     slug: 'why-smart-restaurants-are-reducing-staff-dependency',
     title: 'Why Smart Restaurants Are Reducing Staff Dependency, Not Just Managing Shifts',
     date: 'March 5, 2026',
-    image: '/Why Smart Restaurants.png',
+    image: '/Why Smart Restaurants.jpg',
     category: 'Restaurant Operations',
   },
   {
@@ -90,7 +90,7 @@ const smallGridArticles: Article[] = [
     slug: 'smart-kitchens-and-central-kitchens',
     title: "Smart Kitchens and Central Kitchens: How India's Top F&B Brands Scale in 2025",
     date: 'March 3, 2026',
-    image: '/Smart Kitchens and Central Kitchens.png',
+    image: '/Smart Kitchens and Central Kitchens.jpg',
     category: 'Kitchen',
   },
   {
@@ -98,7 +98,7 @@ const smallGridArticles: Article[] = [
     slug: 'how-smart-menu-engineering-boosts-profits',
     title: 'How Smart Menu Engineering Boosts Restaurant Profits by 15–25%',
     date: 'January 19, 2026',
-    image: '/How Smart Menu.png',
+    image: '/How Smart Menu.jpg',
     category: 'Analytics',
   },
   {
@@ -106,7 +106,7 @@ const smallGridArticles: Article[] = [
     slug: 'beyond-points-native-crm-loyalty-strategies',
     title: 'Beyond Points: Native CRM & Loyalty Strategies for F&B Growth',
     date: 'January 19, 2026',
-    image: '/Beyond Point.png',
+    image: '/Beyond Point.jpg',
     category: 'Restaurant Operations',
   },
   {
@@ -114,7 +114,7 @@ const smallGridArticles: Article[] = [
     slug: 'how-to-manage-and-scale-a-microbrewery-in-india',
     title: 'How to Manage and Scale a Microbrewery in India: The Secret Ingredient Behind the Best Brands',
     date: 'January 19, 2026',
-    image: '/How to Manage and Scale a Microbrewery in India.png',
+    image: '/How to Manage and Scale a Microbrewery in India.jpg',
     category: 'Restaurant Operations',
   },
   {
@@ -122,7 +122,7 @@ const smallGridArticles: Article[] = [
     slug: 'how-restaurants-bars-and-breweries-can-slash-wastage',
     title: 'How Restaurants, Bars, and Breweries Can Slash Wastage and Unlock Growth Margins in 2025',
     date: 'January 15, 2026',
-    image: '/How Restaurants, Bars.png',
+    image: '/How Restaurants, Bars.jpg',
     category: 'Inventory',
   },
 ];

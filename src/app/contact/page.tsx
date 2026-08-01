@@ -85,8 +85,8 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
                 {/* Phone Card */}
-                <a
-                  href="tel:+918460653253"
+                <a 
+                  href="tel:+917022511122" 
                   className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white dark:bg-[#0F1015] border border-zinc-200 dark:border-zinc-800/80 shadow-md hover:border-[#FF4F18]/50 hover:shadow-[0_8px_30px_rgba(255,79,24,0.06)] dark:hover:shadow-[0_8px_30px_rgba(255,79,24,0.15)] transition-all duration-300 transform hover:-translate-y-1 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-[#FF4F18]/10 flex items-center justify-center text-[#FF4F18] mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -95,12 +95,12 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <span className="text-[15px] font-bold text-[#FF4F18] uppercase tracking-wider mb-1">Phone</span>
-                  <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm break-all">+918460653253</span>
+                  <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm break-all">+91 70225 11122</span>
                 </a>
 
                 {/* Email Card */}
-                <a
-                  href="mailto:03bhaumik@gmail.com"
+                <a 
+                  href="mailto:info@digitory.com" 
                   className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white dark:bg-[#0F1015] border border-zinc-200 dark:border-zinc-800/80 shadow-md hover:border-[#FF4F18]/50 hover:shadow-[0_8px_30px_rgba(255,79,24,0.06)] dark:hover:shadow-[0_8px_30px_rgba(255,79,24,0.15)] transition-all duration-300 transform hover:-translate-y-1 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-[#FF4F18]/10 flex items-center justify-center text-[#FF4F18] mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <span className="text-[15px] font-bold text-[#FF4F18] uppercase tracking-wider mb-1">Email</span>
-                  <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm break-all">03bhaumik@gmail.com</span>
+                  <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm break-all">info@digitory.com</span>
                 </a>
 
               </div>
@@ -124,14 +124,16 @@ export default function ContactPage() {
                 </div>
                 <span className="text-[15px] font-bold text-[#FF4F18] uppercase tracking-wider mb-1">Address</span>
                 <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm leading-relaxed max-w-sm">
-                  507, LUXURIA TRADE HUB, Rundh, Dumas Road, Surat - 395007
+                  DIGITORY SOLUTIONS PRIVATE LIMITED
+                  <br />
+                  #85, 1st Floor, Vaibhav Bldg Gandhi Bazaar Main Road, Basavangudi, Bangalore - 560004
                 </span>
               </div>
 
               {/* Map Card */}
               <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800/80 shadow-md h-[320px] w-full group">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Luxuria+Trade+Hub+Dumas+Road+Surat"
+                  href="https://www.google.com/maps/search/?api=1&query=Vaibhav+Bldg+Gandhi+Bazaar+Main+Road+Basavangudi+Bangalore"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute top-4 left-4 z-10 bg-white dark:bg-[#121318] text-blue-600 dark:text-blue-400 px-3.5 py-2 rounded-lg shadow-md border border-zinc-200 dark:border-zinc-800 text-xs font-bold flex items-center gap-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-all active:scale-[0.97]"
@@ -142,7 +144,7 @@ export default function ContactPage() {
                   </svg>
                 </a>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.809340056972!2d72.78440057503387!3d21.16075678052219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e6c88888889%3A0x6b772c6761c713b6!2sLuxuria+Trade+Hub!5e0!3m2!1sen!2sin!4v1721300000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Vaibhav%20Bldg%20Gandhi%20Bazaar%20Main%20Road,%20Basavangudi,%20Bangalore&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   className="w-full h-full border-0 dark-map"
                   allowFullScreen
                   loading="lazy"

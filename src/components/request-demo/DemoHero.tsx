@@ -25,76 +25,98 @@ export default function DemoHero() {
   ];
 
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-6 md:px-8 text-center space-y-10 z-10">
-      {/* Tagline Badge */}
-      <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block">
-        Request a Demo
-      </span>
+    <>
+      {/* 
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-6 md:px-8 text-center space-y-12 z-10">
+        {/* Badge */}
+        {/* <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4F18]/10 text-xs sm:text-sm font-semibold text-[#FF4F18] uppercase tracking-widest">
+          Request a Demo
+        </span> */}
 
-      {/* Hero Content */}
-      <div className="max-w-4xl mx-auto space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-[52px] font-[850] tracking-tight text-[#111111] dark:text-white leading-[1.1]">
-          See Digitory in action.
-          <br />
-          <span className="text-[#FF4F18]">Transform your kitchen operations.</span>
-        </h1>
-        <p className="text-base sm:text-lg text-zinc-650 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-          Discover how our unified restaurant operating system manages chaos hours, optimizes inventory, and boosts margins.
-        </p>
-      </div>
+        {/* Hero Content */}
+        {/* <div className="max-w-4xl mx-auto space-y-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.1]">
+            See Digitory in action.
+            <br />
+            <span className="text-[#FF4F18] drop-shadow-[0_4px_12px_rgba(255,79,24,0.1)]">Transform your kitchen operations.</span>
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+            Discover how our unified restaurant operating system manages chaos hours, optimizes inventory, and boosts margins.
+          </p>
+        </div> */}
 
-      {/* Trust Circles (Trustship) */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-        <div className="flex -space-x-3 select-none">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ECECEC] text-zinc-650 font-extrabold text-[11px] border-2 border-white shadow-2xs">
-            R
+        {/* Trust Circles (Trustship) */}
+        {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div className="flex -space-x-3">
+            {trustCircles.map((circle, idx) => (
+              <div
+                key={idx}
+                className={`flex h-8 w-8 items-center justify-center rounded-full ${circle.bg} ${circle.textCol} font-extrabold text-xs border-2 border-white`}
+              >
+                {circle.text}
+              </div>
+            ))}
           </div>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFF3EF] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
-            C
-          </div>
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFE5D9] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
-            B
-          </div>
+          <p className="text-xs sm:text-sm text-zinc-505 dark:text-zinc-400 font-medium">
+            Trusted by top restaurants, cafés, and breweries across India.
+          </p>
+        </div> */}
+
+        {/* Short Intro Video */}
+        {/* <div className="relative max-w-4xl mx-auto aspect-16/9 rounded-[32px] overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-xl group">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover cursor-pointer"
+            onClick={togglePlay}
+          >
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Play/Pause Overlay Button */}
+          {/* <button
+            onClick={togglePlay}
+            className="absolute bottom-6 right-6 p-4 rounded-full bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white backdrop-blur-md shadow-lg border border-zinc-200/50 dark:border-zinc-800/50 hover:scale-105 active:scale-95 transition-all z-10 cursor-pointer"
+            aria-label={isPlaying ? 'Pause video' : 'Play video'}
+          >
+            {isPlaying ? (
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            )}
+          </button>
+          {/* Subtle Dark Overlay */}
+          {/* <div className="absolute inset-0 bg-black/5 pointer-events-none" />
         </div>
-        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium">
-          Trusted by top restaurants, cafés, and breweries across India.
-        </p>
-      </div>
+      </section> */}
 
-      {/* Short Intro Video */}
-      <div className="relative max-w-4xl mx-auto aspect-16/9 rounded-[28px] overflow-hidden border border-zinc-200/60 dark:border-zinc-800 shadow-2xs group">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover cursor-pointer"
-          onClick={togglePlay}
-        >
-          <source src="/video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Play/Pause Overlay Button */}
-        <button
-          onClick={togglePlay}
-          className="absolute bottom-6 right-6 p-4 rounded-full bg-white/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-white backdrop-blur-md shadow-lg border border-zinc-200/50 dark:border-zinc-800/50 hover:scale-105 active:scale-95 transition-all z-10 cursor-pointer"
-          aria-label={isPlaying ? 'Pause video' : 'Play video'}
-        >
-          {isPlaying ? (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-        </button>
-        {/* Subtle Dark Overlay */}
-        <div className="absolute inset-0 bg-black/5 pointer-events-none" />
-      </div>
-    </section>
+      {/* Cinematic Video Hero Section */}
+      <section className="relative h-[80vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full z-0 select-none pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="w-full h-full object-cover scale-[1.01]"
+          >
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Overlay Gradient for high contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
+        </div>
+      </section>
+    </>
   );
 }
