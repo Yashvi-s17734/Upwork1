@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Header from '../component/header/page';
-import BlogHero from '../component/blog/BlogHero';
-import LatestStories from '../component/blog/LatestStories';
-import FooterPage from '../component/footer/page';
+import Header from '../../components/Header';
+import BlogHero from '../../components/blog/BlogHero';
+import LatestStories from '../../components/blog/LatestStories';
+import FooterPage from '../../components/Footer';
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Articles');

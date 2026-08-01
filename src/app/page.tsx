@@ -1,15 +1,15 @@
-import Header from "./component/header/page";
-import Hero from "./component/hero/page";
-import Stats from "./component/stats/page";
-import TestSection from "./component/test-section/page";
-import Features from "./component/features/page";
-import Updates from "./component/updates/page";
-import ScrollFocusWrapper from "./component/ScrollFocusWrapper";
-import OrdersPage from "./component/orders/page";
-import RestaurantOSPage from "./component/restaurantos/page";
-import FAQPage from "./component/faq/page";
-import InsightsPage from "./component/insights/page";
-import FooterPage from "./component/footer/page";
+import Header from "../components/Header";
+import Hero from "../components/home/Hero";
+import Stats from "../components/home/Stats";
+import TestSection from "../components/home/TestSection";
+import Features from "../components/home/Features";
+import Updates from "../components/home/Updates";
+import ScrollFocusWrapper from "../components/ScrollFocusWrapper";
+import OrdersPage from "../components/home/Orders";
+import RestaurantOSPage from "../components/home/RestaurantOS";
+import FAQPage from "../components/home/FAQ";
+import InsightsPage from "../components/home/Insights";
+import FooterPage from "../components/Footer";
 
 export default function Home() {
   return (

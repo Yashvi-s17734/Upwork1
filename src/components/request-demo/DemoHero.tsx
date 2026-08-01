@@ -25,35 +25,36 @@ export default function DemoHero() {
   ];
 
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-6 md:px-8 text-center space-y-12 z-10">
-      {/* Badge */}
-      <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4F18]/10 text-xs sm:text-sm font-semibold text-[#FF4F18] uppercase tracking-widest">
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 max-w-7xl mx-auto px-6 md:px-8 text-center space-y-10 z-10">
+      {/* Tagline Badge */}
+      <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block">
         Request a Demo
       </span>
 
       {/* Hero Content */}
       <div className="max-w-4xl mx-auto space-y-6">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white leading-[1.1]">
+        <h1 className="text-3xl sm:text-4xl md:text-[52px] font-[850] tracking-tight text-[#111111] dark:text-white leading-[1.1]">
           See Digitory in action.
           <br />
-          <span className="text-[#FF4F18] drop-shadow-[0_4px_12px_rgba(255,79,24,0.1)]">Transform your kitchen operations.</span>
+          <span className="text-[#FF4F18]">Transform your kitchen operations.</span>
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg text-zinc-650 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed">
           Discover how our unified restaurant operating system manages chaos hours, optimizes inventory, and boosts margins.
         </p>
       </div>
 
       {/* Trust Circles (Trustship) */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-        <div className="flex -space-x-3">
-          {trustCircles.map((circle, idx) => (
-            <div
-              key={idx}
-              className={`flex h-8 w-8 items-center justify-center rounded-full ${circle.bg} ${circle.textCol} font-extrabold text-xs border-2 border-white`}
-            >
-              {circle.text}
-            </div>
-          ))}
+        <div className="flex -space-x-3 select-none">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ECECEC] text-zinc-650 font-extrabold text-[11px] border-2 border-white shadow-2xs">
+            R
+          </div>
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFF3EF] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
+            C
+          </div>
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFE5D9] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
+            B
+          </div>
         </div>
         <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium">
           Trusted by top restaurants, cafés, and breweries across India.
@@ -61,7 +62,7 @@ export default function DemoHero() {
       </div>
 
       {/* Short Intro Video */}
-      <div className="relative max-w-4xl mx-auto aspect-16/9 rounded-[32px] overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-xl group">
+      <div className="relative max-w-4xl mx-auto aspect-16/9 rounded-[28px] overflow-hidden border border-zinc-200/60 dark:border-zinc-800 shadow-2xs group">
         <video
           ref={videoRef}
           autoPlay

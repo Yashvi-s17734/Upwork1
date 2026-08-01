@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Header from '../component/header/page';
-import FooterPage from '../component/footer/page';
+import Header from '../../components/Header';
+import FooterPage from '../../components/Footer';
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -52,7 +52,7 @@ export default function ContactPage() {
       </div>
 
       <main className="flex-1 w-full bg-[#fafafa] dark:bg-[#08080a] text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
-        
+
         {/* Cinematic Video Hero Section */}
         <section className="relative h-[80vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden">
           {/* Background Video */}
@@ -77,16 +77,16 @@ export default function ContactPage() {
         <section id="contact-content" className="pt-6 pb-16 md:pt-8 md:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
           {/* Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-            
+
             {/* Left Column (Cards and Map) */}
             <div className="lg:col-span-5 flex flex-col gap-6">
-              
+
               {/* Phone and Email row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                
+
                 {/* Phone Card */}
-                <a 
-                  href="tel:+918460653253" 
+                <a
+                  href="tel:+918460653253"
                   className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white dark:bg-[#0F1015] border border-zinc-200 dark:border-zinc-800/80 shadow-md hover:border-[#FF4F18]/50 hover:shadow-[0_8px_30px_rgba(255,79,24,0.06)] dark:hover:shadow-[0_8px_30px_rgba(255,79,24,0.15)] transition-all duration-300 transform hover:-translate-y-1 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-[#FF4F18]/10 flex items-center justify-center text-[#FF4F18] mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -99,8 +99,8 @@ export default function ContactPage() {
                 </a>
 
                 {/* Email Card */}
-                <a 
-                  href="mailto:03bhaumik@gmail.com" 
+                <a
+                  href="mailto:03bhaumik@gmail.com"
                   className="flex flex-col items-center justify-center p-8 rounded-2xl bg-white dark:bg-[#0F1015] border border-zinc-200 dark:border-zinc-800/80 shadow-md hover:border-[#FF4F18]/50 hover:shadow-[0_8px_30px_rgba(255,79,24,0.06)] dark:hover:shadow-[0_8px_30px_rgba(255,79,24,0.15)] transition-all duration-300 transform hover:-translate-y-1 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-orange-50 dark:bg-[#FF4F18]/10 flex items-center justify-center text-[#FF4F18] mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -111,7 +111,7 @@ export default function ContactPage() {
                   <span className="text-[15px] font-bold text-[#FF4F18] uppercase tracking-wider mb-1">Email</span>
                   <span className="text-zinc-800 dark:text-zinc-100 font-semibold text-center text-sm break-all">03bhaumik@gmail.com</span>
                 </a>
-                
+
               </div>
 
               {/* Address Card */}

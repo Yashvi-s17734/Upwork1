@@ -20,14 +20,14 @@ export default function RestaurantOSHero() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-4xl sm:text-[44px] md:text-[52px] font-[850] tracking-tight text-[#111111] leading-[1.05]">
+          <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15]">
             Manage rush hours,
             <br />
             <span className="text-[#FF4F18]">not rush.</span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg text-zinc-650 leading-relaxed">
+          <p className="text-base md:text-lg text-zinc-650 leading-relaxed">
             From lightning-fast billing counters and kitchen display screens to automated inventory auto-deduction and multi-outlet reporting — Digitory helps you operate smarter and grow profitably.
           </p>
 
@@ -47,7 +47,7 @@ export default function RestaurantOSHero() {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ECECEC] text-zinc-650 font-extrabold text-[11px] border-2 border-white shadow-2xs">
                 R
               </div>
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#D2E9E9] text-teal-600 font-extrabold text-[11px] border-2 border-white shadow-2xs">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFF3EF] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
                 C
               </div>
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FFE5D9] text-[#FF4F18] font-extrabold text-[11px] border-2 border-white shadow-2xs">
@@ -86,7 +86,7 @@ export default function RestaurantOSHero() {
                 {/* Table 01 */}
                 <div className="flex flex-col items-center justify-center py-3.5 px-3 rounded-2xl border bg-[#18191B] border-zinc-800 text-zinc-300">
                   <span className="text-sm font-extrabold">Table 01</span>
-                  <span className="text-[10px] font-bold mt-1 text-[#10B981]">Ready</span>
+                  <span className="text-[10px] font-bold mt-1 text-white">Ready</span>
                 </div>
 
                 {/* Table 04 - Selected */}
@@ -98,7 +98,7 @@ export default function RestaurantOSHero() {
                 {/* Table 09 */}
                 <div className="flex flex-col items-center justify-center py-3.5 px-3 rounded-2xl border bg-[#18191B] border-zinc-800 text-zinc-300">
                   <span className="text-sm font-extrabold">Table 09</span>
-                  <span className="text-[10px] font-bold mt-1 text-amber-500">Billing</span>
+                  <span className="text-[10px] font-bold mt-1 text-white">Billing</span>
                 </div>
               </div>
             </div>

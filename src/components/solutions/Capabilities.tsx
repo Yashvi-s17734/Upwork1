@@ -51,10 +51,10 @@ export default function Capabilities() {
         <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-3">
           System Capability Matrix
         </span>
-        <h2 className="text-3xl sm:text-[38px] md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
           6 Core Platform <span className="text-[#FF4F18]">Capabilities</span>
         </h2>
-        <p className="text-sm md:text-base text-zinc-500 leading-relaxed max-w-2xl">
+        <p className="text-base md:text-lg text-zinc-650 leading-relaxed max-w-2xl">
           Engineered without compromise for high-turnover F&B operators.
         </p>
       </div>
@@ -161,7 +161,7 @@ export default function Capabilities() {
             </span>
 
             {/* Icon */}
-            <div className="w-12 h-12 rounded-2xl bg-[#EAF9F0] text-teal-600 flex items-center justify-center shadow-3xs">
+            <div className="w-12 h-12 rounded-2xl bg-[#FFF3EF] text-[#FF4F18] flex items-center justify-center shadow-3xs">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
               </svg>
@@ -177,8 +177,11 @@ export default function Capabilities() {
             </div>
           </div>
 
-          <div className="bg-[#EAF9F0] text-teal-800 text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-emerald-100">
-            <span>✓</span> Avg Kitchen Prep: 4.2 Mins
+          <div className="bg-[#FFF3EF] text-[#FF4F18] text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-orange-100">
+            <svg className="w-4 h-4 text-[#FF4F18] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            Avg Kitchen Prep: 4.2 Mins
           </div>
         </div>
 
@@ -195,7 +198,7 @@ export default function Capabilities() {
             </span>
 
             {/* Icon */}
-            <div className="w-12 h-12 rounded-2xl bg-[#FEF9C3] text-amber-600 flex items-center justify-center shadow-3xs">
+            <div className="w-12 h-12 rounded-2xl bg-[#FFF3EF] text-[#FF4F18] flex items-center justify-center shadow-3xs">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
               </svg>
@@ -211,8 +214,11 @@ export default function Capabilities() {
             </div>
           </div>
 
-          <div className="bg-[#FEF9C3] text-amber-800 text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-yellow-100">
-            <span>⚠</span> Low Stock Alert Triggers Auto-PO
+          <div className="bg-[#FFF3EF] text-[#FF4F18] text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-orange-100">
+            <svg className="w-4 h-4 text-[#FF4F18] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            Low Stock Alert Triggers Auto-PO
           </div>
         </div>
 
@@ -224,7 +230,7 @@ export default function Capabilities() {
             </span>
 
             {/* Icon */}
-            <div className="w-12 h-12 rounded-2xl bg-[#FAF5FF] text-purple-600 flex items-center justify-center shadow-3xs">
+            <div className="w-12 h-12 rounded-2xl bg-[#FFF3EF] text-[#FF4F18] flex items-center justify-center shadow-3xs">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0017.75 3.75H6.25A2.25 2.25 0 004 6v12A2.25 2.25 0 006.25 20.25z" />
               </svg>
@@ -240,8 +246,11 @@ export default function Capabilities() {
             </div>
           </div>
 
-          <div className="bg-[#FAF5FF] text-purple-800 text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-purple-100">
-            <span>📱</span> Real-Time Owner Mobile App
+          <div className="bg-[#FFF3EF] text-[#FF4F18] text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-orange-100">
+            <svg className="w-4 h-4 text-[#FF4F18] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+            </svg>
+            Real-Time Owner Mobile App
           </div>
         </div>
 
@@ -253,7 +262,7 @@ export default function Capabilities() {
             </span>
 
             {/* Icon */}
-            <div className="w-12 h-12 rounded-2xl bg-[#EFF6FF] text-blue-600 flex items-center justify-center shadow-3xs">
+            <div className="w-12 h-12 rounded-2xl bg-[#FFF3EF] text-[#FF4F18] flex items-center justify-center shadow-3xs">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
               </svg>
@@ -269,8 +278,11 @@ export default function Capabilities() {
             </div>
           </div>
 
-          <div className="bg-[#EFF6FF] text-blue-800 text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-blue-100">
-            <span>🌐</span> Global Menu & Price Push
+          <div className="bg-[#FFF3EF] text-[#FF4F18] text-xs font-extrabold px-4 py-3.5 rounded-2xl flex items-center gap-2 border border-orange-100">
+            <svg className="w-4 h-4 text-[#FF4F18] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zM2.25 12h19.5m-3.18-5.25H5.43m13.14 10.5H5.43M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9z" />
+            </svg>
+            Global Menu & Price Push
           </div>
         </div>
 

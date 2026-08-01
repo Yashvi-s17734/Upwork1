@@ -18,9 +18,9 @@ export default function ToolIntegrations() {
       category: "delivery",
       name: "Swiggy Direct",
       subtext: "2-way menu & order sync",
-      iconBg: "bg-[#FDF2F8]",
+      iconBg: "bg-[#FFF3EF]",
       iconSvg: (
-        <svg className="w-6 h-6 text-pink-650" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <svg className="w-6 h-6 text-[#FF4F18]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.61 9.51m5.98 4.86a14.98 14.98 0 01-6.16 12.12A14.978 14.978 0 012.25 12c0-8.3 6.7-15 15-15h.75v.75c0 8.3-6.7 15-15 15z" />
         </svg>
       ),
@@ -30,9 +30,9 @@ export default function ToolIntegrations() {
       category: "delivery",
       name: "Zomato Connect",
       subtext: "Auto-accept & stock toggle",
-      iconBg: "bg-red-50",
+      iconBg: "bg-[#FFF3EF]",
       iconSvg: (
-        <span className="w-5 h-5 rounded-full bg-red-500 block shadow-3xs" />
+        <span className="w-5 h-5 rounded-full bg-[#FF4F18] block shadow-3xs" />
       ),
     },
     {
@@ -40,9 +40,9 @@ export default function ToolIntegrations() {
       category: "payment",
       name: "Razorpay",
       subtext: "UPI & card payment recon",
-      iconBg: "bg-[#EFF6FF]",
+      iconBg: "bg-[#FFF3EF]",
       iconSvg: (
-        <svg className="w-6 h-6 text-blue-650" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <svg className="w-6 h-6 text-[#FF4F18]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
         </svg>
       ),
@@ -52,9 +52,9 @@ export default function ToolIntegrations() {
       category: "accounting",
       name: "Tally Prime",
       subtext: "Automated daily sales entries",
-      iconBg: "bg-[#FAF5FF]",
+      iconBg: "bg-[#FFF3EF]",
       iconSvg: (
-        <svg className="w-6 h-6 text-purple-650" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <svg className="w-6 h-6 text-[#FF4F18]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
         </svg>
       ),
@@ -76,23 +76,23 @@ export default function ToolIntegrations() {
   });
 
   return (
-    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10 text-center">
+    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
       
       {/* Header Block */}
-      <div className="max-w-2xl mx-auto mb-10 md:mb-12">
+      <div className="text-left mb-10 md:mb-12">
         <span className="text-[11px] md:text-[12px] font-extrabold uppercase tracking-widest text-[#FF4F18] block mb-3">
           Tool Integrations
         </span>
-        <h2 className="text-3xl sm:text-[38px] md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-4">
           Connects with <span className="text-[#FF4F18]">your favorite apps</span>
         </h2>
-        <p className="text-sm md:text-base text-zinc-500 leading-relaxed">
+        <p className="text-base md:text-lg text-zinc-650 leading-relaxed">
           1-click setup with Swiggy, Zomato, Razorpay, Paytm, Tally, WhatsApp, and POS hardware.
         </p>
       </div>
 
       {/* Category Tab Selector */}
-      <div className="flex flex-wrap justify-center gap-2.5 mb-12">
+      <div className="flex flex-wrap justify-start gap-2.5 mb-12">
         {categories.map((cat) => {
           const isActive = activeCategory === cat.value;
           return (
