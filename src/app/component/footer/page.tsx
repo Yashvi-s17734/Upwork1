@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const FOOTER_COLUMNS = [
@@ -96,6 +96,18 @@ export default function FooterPage() {
                   {col.links.map((link) => {
                     const isEmail = link.includes("@");
                     const isPhone = link.startsWith("+");
+                    if (link === "Blog") {
+                      return (
+                        <li key={link}>
+                          <Link
+                            href="/blog"
+                            className="text-[14px] font-semibold text-[#888888] hover:text-white transition-colors block py-0.5"
+                          >
+                            {link}
+                          </Link>
+                        </li>
+                      );
+                    }
                     return (
                       <li key={link}>
                         <a

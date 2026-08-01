@@ -6,22 +6,22 @@ export default function Stats() {
   const stats = [
     {
       value: '30%',
-      label: 'less wastage',
+      label: 'Less Wastage',
       desc: 'Better inventory visibility and tracking',
     },
     {
       value: '2x',
-      label: 'faster decision making',
+      label: 'Faster Decision Making',
       desc: 'Real-time reports across outlets',
     },
     {
       value: '100%',
-      label: 'operational visibility',
+      label: 'Operational Visibility',
       desc: 'From orders to inventory to customer data',
     },
     {
       value: '1',
-      label: 'connected system',
+      label: 'Connected System',
       desc: 'No more switching between 10 tools',
     },
   ];
@@ -44,18 +44,15 @@ export default function Stats() {
               key={idx}
               className="flex flex-col items-center px-4 md:border-r md:border-zinc-200 last:border-r-0"
             >
-              {/* Stat Value */}
-              <span className="text-5xl md:text-6xl font-extrabold tracking-tight text-[#FF4F18] leading-none">
-                {stat.value}
-              </span>
-
-              {/* Stat Label */}
-              <span className="text-zinc-900 text-lg font-semibold mt-4 mb-2">
-                {stat.label}
-              </span>
-
-              {/* Stat Description */}
-              <p className="text-zinc-500 text-xs sm:text-sm max-w-[200px] leading-relaxed">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight max-w-[220px]">
+                <span className="text-[#FF4F18]">{stat.value}</span>{" "}
+                
+              </h3>
+ <h3 className="text-2xl md:text-3xl font-bold leading-tight max-w-[220px]">
+                
+                <span className="text-[#111111]">{stat.label}</span>
+              </h3>
+              <p className="text-black text-sm mt-3 max-w-[220px] leading-relaxed">
                 {stat.desc}
               </p>
             </div>

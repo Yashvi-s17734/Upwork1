@@ -21,13 +21,20 @@ We have successfully configured global styles and built the first five main sect
 - Designed and built the WhatsApp chat mockup in code (HTML/Tailwind CSS) on the right.
 - Removed the black device border from the WhatsApp chat mockup container as requested.
 
-### 4. Stats Section ('Be rush-hour ready, always')
+### 4. [orders/page.tsx](file:///c:/Users/Yashvi%20Shah/Desktop/upwork/src/app/component/orders/page.tsx)
+- Escaped single quote (`'`) to `&apos;` on line 105 to resolve `react/no-unescaped-entities` error.
+
+### 5. [footer/page.tsx](file:///c:/Users/Yashvi%20Shah/Desktop/upwork/src/app/component/footer/page.tsx)
+- Removed unused `useState` import to clean up compiler warnings.
+- Imported Next.js `Link` component and routed the **Blog** COMPANY link to `/blog` to enable client-side navigation.
+
+### 6. Stats Section ('Be rush-hour ready, always')
 - Created the Stats component at [page.tsx (Stats)](file:///c:/Users/Yashvi%20Shah/Desktop/upwork/src/app/component/stats/page.tsx).
 - Added a light gray horizontal divider separating the Hero and Stats sections.
 - Set up a centered section heading and a responsive 4-column metrics grid.
 - Configured thin vertical dividing lines to separate the metrics on desktop viewports.
 
-### 5. Saturday Night Test Section
+### 7. Saturday Night Test Section
 - Created the TestSection component at [page.tsx (TestSection)](file:///c:/Users/Yashvi%20Shah/Desktop/upwork/src/app/component/test-section/page.tsx).
 - Built a vertical timeline representing operations steps (1 to 5) linked with orange borders and custom separators.
 - Rendered the chaotic pre-Digitory WhatsApp mockup (warning logs and red alerts) to contrast against the Hero mockup.
