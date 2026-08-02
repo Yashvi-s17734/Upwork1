@@ -14,7 +14,7 @@ const FOOTER_COLUMNS = [
   },
   {
     title: "COMPANY",
-    links: ["About", "Blog", "Careers", "Partnership"]
+    links: ["About", "Blog", "Solutions", "Contact"]
   },
   {
     title: "CONTACT",
@@ -100,11 +100,18 @@ export default function FooterPage() {
                   {col.links.map((link) => {
                     const isEmail = link.includes("@");
                     const isPhone = link.startsWith("+");
-                    if (link === "Blog") {
+                    const hrefMap: Record<string, string> = {
+                      "Blog": "/blog",
+                      "Solutions": "/solutions",
+                      "Contact": "/contact",
+                      "Book a Demo": "/request-demo",
+                    };
+
+                    if (hrefMap[link]) {
                       return (
                         <li key={link}>
                           <Link
-                            href="/blog"
+                            href={hrefMap[link]}
                             className="text-[14px] font-semibold text-[#888888] hover:text-white transition-colors block py-0.5"
                           >
                             {link}

@@ -22,12 +22,12 @@ export default function RequestDemoPage() {
 
         {/* Demo Booking Form */}
         <DemoForm />
-
+        {/* FAQs */}
+        <FAQPage />
         {/* Testimonials (Chaos Stories) */}
         <RestaurantOSPage />
 
-        {/* FAQs */}
-        <FAQPage />
+
 
         {/* Footer */}
         <FooterPage />

@@ -83,7 +83,7 @@ export default function TestSection() {
         {/* Section Heading */}
         <h2 className="text-center text-3xl sm:text-4xl md:text-[44px] font-[850] tracking-tight text-[#111111] leading-[1.15] mb-10 md:mb-12">
           Can your restaurant handle a busy          <br />
-          <span className="text-[#FF4F18]">Saturday night</span>?
+          <span className="text-[#FF4F18]">Saturday night?</span>
         </h2>
 
         {/* 2-Column Grid */}
