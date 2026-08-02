@@ -63,9 +63,9 @@ export default function Header() {
   };
 
   const navLinks = [
+    { label: 'About', href: '/about' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Restaurant Types', href: '#' },
-    { label: 'Success Stories', href: '#' },
+    { label: 'Restaurant Types', href: '/solutions#restaurant-types' },
     { label: 'Resources', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ];

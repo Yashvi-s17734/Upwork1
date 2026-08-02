@@ -101,6 +101,7 @@ export default function FooterPage() {
                     const isEmail = link.includes("@");
                     const isPhone = link.startsWith("+");
                     const hrefMap: Record<string, string> = {
+                      "About": "/about",
                       "Blog": "/blog",
                       "Solutions": "/solutions",
                       "Contact": "/contact",

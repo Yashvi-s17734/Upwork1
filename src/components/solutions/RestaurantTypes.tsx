@@ -36,7 +36,7 @@ export default function RestaurantTypes() {
   const activeData = types[activeTab];
 
   return (
-    <section className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
+    <section id="restaurant-types" className="mx-auto max-w-7xl px-6 md:px-8 py-6 md:py-10">
       
       {/* Header Block */}
       <div className="text-left mb-10 md:mb-12">
