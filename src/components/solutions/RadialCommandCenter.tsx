@@ -135,29 +135,28 @@ export default function RadialCommandCenter() {
 
       {/* 2-Column Responsive Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-stretch">
-        
+
         {/* Left Column: Modules Grid List */}
-        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 items-start content-start">
+        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
           {modules.map((item) => {
             const isActive = activeModuleId === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => setActiveModuleId(item.id)}
-                className={`flex items-center gap-4 p-5 rounded-2xl border text-left transition-all duration-200 cursor-pointer w-full select-none ${
-                  isActive
-                    ? "bg-white border-zinc-900 shadow-[0_8px_24px_rgba(0,0,0,0.04)] scale-[1.01]"
-                    : "bg-[#FFF]/40 border-zinc-200/60 hover:bg-white hover:border-zinc-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.015)]"
-                }`}
+                className={`flex items-center gap-4 p-5 md:p-6 rounded-2xl border text-left transition-all duration-200 cursor-pointer w-full h-full select-none ${isActive
+                  ? "bg-white border-zinc-900 shadow-[0_8px_24px_rgba(0,0,0,0.04)] scale-[1.01]"
+                  : "bg-[#FFF]/40 border-zinc-200/60 hover:bg-white hover:border-zinc-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.015)]"
+                  }`}
               >
                 {/* Styled Icon Wrapper */}
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${item.iconBg} ${item.iconColor}`}>
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${item.iconBg} ${item.iconColor}`}>
                   {item.iconSvg}
                 </div>
 
                 {/* Text Details */}
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[14px] font-extrabold text-[#111111] leading-tight truncate">
+                  <span className="text-[15px] font-extrabold text-[#111111] leading-tight truncate">
                     {item.label}
                   </span>
                   <span className="text-[11px] font-bold text-zinc-400 mt-1 uppercase tracking-wide">
@@ -170,9 +169,9 @@ export default function RadialCommandCenter() {
         </div>
 
         {/* Right Column: Module Inspector Panel */}
-        <div className="lg:col-span-5 flex">
-          <div className="w-full bg-[#FAF6F0] rounded-2xl p-8 border border-orange-100/50 flex flex-col justify-between gap-8 select-none transition-all duration-300 shadow-2xs">
-            
+        <div className="lg:col-span-5 flex h-full">
+          <div className="w-full bg-[#FAF6F0] rounded-2xl p-8 border border-orange-100/50 flex flex-col justify-between gap-8 select-none transition-all duration-300 shadow-2xs h-full">
+
             {/* Top Inspector Status info */}
             <div className="flex flex-col gap-6">
               <div className="flex items-center justify-between">
@@ -195,12 +194,12 @@ export default function RadialCommandCenter() {
               </div>
             </div>
 
-            {/* Bottom Inspector Metric Highlight - Square Base */}
-            <div className="bg-white rounded-xl p-8 border border-zinc-200 flex flex-col items-center justify-center text-center shadow-3xs min-h-[160px]">
+            {/* Bottom Inspector Metric Highlight */}
+            <div className="bg-white rounded-2xl p-6 md:p-8 border border-zinc-200 flex flex-col items-center justify-center text-center shadow-3xs">
               <span className="text-4xl md:text-5xl font-black text-[#FF4F18] leading-none mb-2">
                 {activeModule.metricValue}
               </span>
-              <span className="text-xs font-bold text-zinc-400 uppercase tracking-wide">
+              <span className="text-xs font-extrabold text-zinc-400 uppercase tracking-wide">
                 {activeModule.metricLabel}
               </span>
             </div>

@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const INSIGHTS_ITEMS = [
   {
     id: 1,
+    slug: "why-restaurants-in-india-trust-digitory-for-smart-operations-growth",
     badge: "FEATURED",
     imageSrc: "/featured.png",
     metadata: "Operations · 8 min read · June 2025",
@@ -12,6 +14,7 @@ const INSIGHTS_ITEMS = [
   },
   {
     id: 2,
+    slug: "kitchen-automation-how-to-future-proof-restaurant-backends",
     badge: "KITCHEN",
     imageSrc: "/kitchen.png",
     metadata: "Kitchen · 5 min read",
@@ -19,6 +22,7 @@ const INSIGHTS_ITEMS = [
   },
   {
     id: 3,
+    slug: "data-driven-kitchen-operations",
     badge: "DATA",
     imageSrc: "/data.png",
     metadata: "Technology · 6 min read",
@@ -56,10 +60,11 @@ export default function InsightsPage() {
 
   const renderCard = (item: typeof INSIGHTS_ITEMS[0], isSlider: boolean = false) => {
     return (
-      <div 
+      <Link 
+        href={`/blog/${item.slug}`}
         className={`flex flex-col h-full bg-white rounded-[28px] border border-zinc-200/60 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform duration-300 ${
           isSlider ? "" : "hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.025)]"
-        } group`}
+        } group block cursor-pointer`}
       >
         {/* Top Banner Graphic area - Full bleed image */}
         <div className="h-[200px] w-full relative overflow-hidden">
@@ -85,12 +90,12 @@ export default function InsightsPage() {
             </p>
             
             {/* Title */}
-            <h3 className="text-[18px] md:text-[20px] font-extrabold text-[#111111] leading-snug">
+            <h3 className="text-[18px] md:text-[20px] font-extrabold text-[#111111] leading-snug group-hover:text-[#FF4F18] transition-colors">
               {item.title}
             </h3>
           </div>
         </div>
-      </div>
+      </Link>
     );
   };
 
@@ -105,12 +110,15 @@ export default function InsightsPage() {
           </h2>
           
           <div>
-            <button className="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-200/80 rounded-full font-bold text-sm text-[#111111] hover:bg-zinc-50 transition-colors shadow-sm select-none cursor-pointer">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-200/80 rounded-full font-bold text-sm text-[#111111] hover:bg-zinc-50 transition-colors shadow-sm select-none cursor-pointer"
+            >
               <span>View all</span>
               <svg className="w-4 h-4 text-[#111111]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
 
