@@ -47,7 +47,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#fafafa] dark:bg-[#08080a] transition-colors duration-300 flex flex-col font-sans relative">
       {/* Header */}
-      <div className="absolute top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50">
         <Header />
       </div>
 
